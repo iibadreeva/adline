@@ -1,0 +1,59 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 1;
+  font-size: 15px;
+  height: 100%;
+  font-family: 'GothamPro', sans-serif;
+  background-color: #fff;
+  color: $mainColor;
+}
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+}
+p {
+  margin: 0 0 15px 0;
+}
+.main {
+  flex: 1;
+  display: flex;
+}
+
+.conteiner {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1280px;
+  min-width: 768px;
+  margin: auto;
+  background-color: #fff;
+
+  @include phones(){
+    min-width: 100%;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.clear {
+  clear: both;
+  height: 15px;
+}
