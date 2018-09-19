@@ -156,39 +156,33 @@
   window.fncSlider = fncSlider;
 }());
 
-const drop = document.querySelector('.js-drop'),
-      menuMini = document.querySelector('.menu-mini');
-
-window.addEventListener('scroll',function() {
-    const html = document.documentElement,
-        scroll = html.scrollTop;
-
-
-    if (scroll > 50){
-        drop.dataset.rule = 'active';
-
-    }else if (scroll < 40){
-        drop.dataset.rule = '';
+const appStyles = (function() {
+    return {
+        init: function () {
+            const drop = document.querySelector('.js-drop')
+            drop.addEventListener('click', appStylesFl);
+        }
     }
-
-});
-function appStyles() {
-    const drop = document.querySelectorAll('.js-drop span'),
-        nav = document.querySelector('.header'),
+})();
+function appStylesFl(e) {
+    const drop = document.querySelectorAll('.drop'),
+        drops = document.querySelectorAll('.js-drop span'),
+        nav = document.querySelector('.topline'),
         body = document.body;
 
     let hidden = body.getAttribute('class') === 'hidden' ? '' : 'hidden',
-        open = nav.dataset.rule  ? '' : 'open',
-        position = nav.style.position == 'fixed' ? 'relative' : 'fixed';
+        open = nav.dataset.rule  ? '' : 'open';
 
-    for(let i=0;i<drop.length;i++){
-        drop[i].getAttribute('class') === 'open' ? drop[i].setAttribute('class', '') : drop[i].setAttribute('class', 'open');
+    for(let i=0;i<drops.length;i++){
+        drops[i].classList.toggle('open');
     }
 
     body.setAttribute('class', hidden);
     nav.dataset.rule = open;
-    // nav.style.position = position;
+    this.classList.toggle('open');
 }
-drop.addEventListener('click', appStyles);
+
+
+try{ appStyles.init(); }catch (e){}
 
 fncSlider(".example-slider", {autoSlidingDelay: 4000});
