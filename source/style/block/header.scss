@@ -5,6 +5,8 @@
   padding: 14px 87px 14px 85px ;
   font-family: "GothamPro-Medium";
   font-size: 15px;
+  box-shadow: 0 60px 70px 0 rgba(0,0,0,.4);
+  z-index: 2;
 
   @include big(){
     font-size: 14px;
@@ -89,9 +91,15 @@
     height: 18px;
     background: url("../image/share-top.png") no-repeat;
     margin-left: 40px;
+    cursor: pointer;
+    background-size: contain;
 
     @include big(){
       margin-left: 2vw;
+    }
+    @include tablets(){
+      width: 10px;
+      height: 11px;
     }
     @include phones(){
      margin-left: 24px;

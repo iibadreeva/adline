@@ -1,42 +1,42 @@
-mixin sliderIndex()
+mixin sliderIndex(obj)
 	.fnc-slider.example-slider
 		.fnc-slider__slides
-		.fnc-slide.m--active-slide
-			.fnc-slide__inner
-				.fnc-slide__image
-				.fnc-slide__bottom
-				.fnc-slide__content
-					h2.fnc-slide__heading
-						.fnc-slide__title вода и
-						.fnc-slide__title ландшафт
-					.fnc-slide__text Палитра хорошего
-					.fnc-slide__text настроения городской жизни
-					a(href="#", class="fnc-slide__btn") смотреть категорию
-						i.icon-angle-right-white
-		.fnc-slide
-			.fnc-slide__inner
-				.fnc-slide__image
-				.fnc-slide__bottom
-				.fnc-slide__content
-					h2.fnc-slide__heading
-						.fnc-slide__title наш
-						.fnc-slide__title дизайн
-					.fnc-slide__text Палитра хорошего
-					.fnc-slide__text настроения городской жизни
-					a(href="#", class="fnc-slide__btn") смотреть категорию
-						i.icon-angle-right-white
-		.fnc-slide
-			.fnc-slide__inner
-				.fnc-slide__image
-				.fnc-slide__bottom
-				.fnc-slide__content
-					h2.fnc-slide__heading
-						.fnc-slide__title ивенты и
-						.fnc-slide__title мероприятия
-					.fnc-slide__text Палитра хорошего
-					.fnc-slide__text настроения городской жизни
-					a(href="#", class="fnc-slide__btn") смотреть категорию
-						i.icon-angle-right-white
+		each item in obj
+			if item.activeClass == true
+				.fnc-slide.m--active-slide
+					.fnc-slide__inner
+						.fnc-slide__image
+						.fnc-slide__bottom
+						.fnc-slide__content
+							.fnc-slide__heading-wrap
+								span.fnc-slide__heading-hidden
+									.fnc-slide__title= item.titleTop
+									.fnc-slide__title= item.titleBottom
+								h2.fnc-slide__heading
+									.fnc-slide__title= item.titleTop
+									.fnc-slide__title= item.titleBottom
+							.fnc-slide__text= item.textTop
+							.fnc-slide__text= item.textBottom
+							a(href="#", class="fnc-slide__btn") смотреть категорию
+								i.icon-angle-right-white
+			else
+				.fnc-slide
+					.fnc-slide__inner
+						.fnc-slide__image
+						.fnc-slide__bottom
+						.fnc-slide__content
+							.fnc-slide__heading-wrap
+								span.fnc-slide__heading-hidden
+									.fnc-slide__title= item.titleTop
+									.fnc-slide__title= item.titleBottom
+								h2.fnc-slide__heading
+									.fnc-slide__title= item.titleTop
+									.fnc-slide__title= item.titleBottom
+							.fnc-slide__text= item.textTop
+							.fnc-slide__text= item.textBottom
+							a(href="#", class="fnc-slide__btn") смотреть категорию
+								i.icon-angle-right-white
+
 		.fnc-nav
 			.fnc-nav__bgs
 				.fnc-nav__bg.m--active-nav-bg

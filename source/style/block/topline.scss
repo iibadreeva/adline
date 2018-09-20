@@ -1,0 +1,41 @@
+.topline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: flex-start;
+  line-height: 2;
+  font-weight: normal;
+  padding: 5rem 0 3rem 2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  z-index: 8;
+  height: 100%;
+  background: #fff;
+  transition: 0.3s;
+  transform: translateX(100%);
+
+  &__item {
+    list-style-type: none;
+    padding: 0;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    color: $mainColor;
+    text-decoration: none;
+  }
+
+}
+.topline[data-rule="open"] {
+  //display: block;
+  transform: translateX(0%);
+}

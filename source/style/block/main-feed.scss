@@ -1,0 +1,92 @@
+.main-feed {
+  padding-top: 99px;  
+  padding-bottom: 99px;
+
+  &__title {
+    font-family: "GothamPro-Bold";
+    font-size: 35px;
+    margin-bottom: 40px;
+    position: relative;
+    top: -4px;
+    left: -3px;
+  }
+
+  &__text {
+    font-family: "GothamPro-Medium";
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+    line-height: 1.5;
+  }
+
+  .link-article__inner {
+    margin-bottom: 95px;
+  }
+
+  &__link {
+    color: #606060;
+    font-family: "GothamPro-Medium";
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 95px;
+    font-size: 20px;
+
+    i {
+      position: relative;
+      top: -2px;
+      left: 5px;
+    }
+
+    &:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      background: #afafaf;
+      height: 1px;
+    }
+
+    &:hover {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+
+  &__right {
+    float: right;
+    margin-right: 65px;
+    text-align: center;
+  }
+
+
+  &__author {
+    width: 60%;
+
+    &__image {
+      float: left;
+      margin-right: 24px;
+      border-radius: 50%;
+      position: relative;
+      left: -4px;
+      top: 5px;
+    }
+
+    &__content {
+      overflow: hidden;
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+    }
+
+    &__title {
+      display: inline-block;
+      font-family: "GothamPro-Medium";
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding-bottom: 14px;
+      border-bottom: 3px solid $progressColor;
+    }
+  }
+}

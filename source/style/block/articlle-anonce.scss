@@ -1,0 +1,109 @@
+.articlle-anonce {
+  padding-bottom: 92px;
+
+  &__title {
+    font-size: 26px;
+    font-family: 'GothamPro-Medium';
+    border-bottom: 3px solid $progressColor;
+    padding-bottom: 19px;
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    margin-right: -30px;
+    margin-bottom: 65px;
+  }
+
+  &__item {
+    text-decoration: none;
+    margin-right: 30px;
+    flex: 1 1 auto;
+
+    &--video {
+      flex: 2 1 730px;
+
+      .articlle-anonce__image-wrap {
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          background: hsla(0, 0%, 0%, 0.2);
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+        }
+      }
+    }
+  }
+
+  &__play {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 86px;
+    height: 86px;
+    z-index: 1;
+    background: url("../image/play.svg");
+  }
+
+  &__image-wrap {
+    display: block;
+    max-height: 363px;
+    min-height: 218px;
+    overflow: hidden;
+    margin-bottom: 14px;
+
+    @include tablets() {
+      max-height: 218px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &__name {
+    width: 70%;
+    color: $mainColor;
+    line-height: 1.4;
+  }
+
+  &__sub-title {
+    margin-bottom: 3px;
+  }
+
+  &__date {
+    font-family: 'GothamPro-Medium';
+    color: $mainColor;
+    padding-right: 10px;
+  }
+
+  &__info {
+    display: inline-block;
+    font-family: 'GothamPro-Medium';
+    color: #999999;
+    padding-left: 10px;
+    border-left: 1px solid #999999;
+  }
+}

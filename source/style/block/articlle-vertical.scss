@@ -1,0 +1,80 @@
+.articlle-vertical {
+  padding-bottom: 30px;
+
+  &__title {
+    font-size: 20px;
+    font-family: 'GothamPro-Medium';
+    border-bottom: 3px solid $progressColor;
+    padding-bottom: 17px;
+    margin-bottom: 55px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    margin-right: -32px;
+    margin-bottom: 74px;
+  }
+
+  &__item {
+    text-decoration: none;
+    margin-right: 32px;
+  }
+
+  &__image-wrap {
+    display: block;
+    max-height: 363px;
+    min-height: 218px;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    @include tablets() {
+      max-height: 218px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &__name {
+    width: 70%;
+    color: $mainColor;
+    line-height: 1.4;
+  }
+
+  //&__link {
+  //  text-align: center;
+  //
+  //  &__inner {
+  //    color: $colorLink;
+  //    text-decoration: none;
+  //    font-size: 20px;
+  //    font-family: 'GothamPro-Medium';
+  //    display: inline-block;
+  //
+  //    i {
+  //      position: relative;
+  //      top: -2px;
+  //      left: 5px;
+  //    }
+  //
+  //    &:after {
+  //      content: " ";
+  //      display: block;
+  //      width: 100%;
+  //      background: #afafaf;
+  //      height: 1px;
+  //    }
+  //
+  //    &:hover {
+  //      &:after {
+  //        background: transparent;
+  //      }
+  //    }
+  //  }
+  //}
+
+
+}

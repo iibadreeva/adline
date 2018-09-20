@@ -1,9 +1,88 @@
 extends ../main.layout.pug
 include ../block/slider.pug
+include ../block/header.pug
+
+block title
+	title Главная станица
 
 block content
-	.content
-		+sliderIndex()
-		
-		article.page
-			h1 Почему кот?
+	+headers('/')
+
+	main.main
+		.content
+			+sliderIndex(sliderJson)
+
+			article.window__inner
+				.main-feed
+					section.main-feed__right
+						.simple-slider
+							.simple-slider__wrap.js-slider
+								.simple-slider__image(style="background-image: url(image/simple-slide-1.jpg")
+									.simple-slider__title Российский национальный приз в области дизайна «Виктория»
+								.simple-slider__image(style="background-image: url('http://www.mironova-design.ru/I/awards/avard_.jpg")
+									.simple-slider__title Российский национальный приз в области дизайна2
+								.simple-slider__image(style="background-image: url('https://www.bl-g.ru/about/diplomas/nagrady_russian_design_2011.JPG")
+									.simple-slider__title Российский национальный приз в области дизайна 3
+							.simple-slider__zoom
+							a(href="#", class="simple-slider__link js-slider-link") left
+								i.icon-chevron-left
+							a(href="#", class="simple-slider__link js-slider-link") right
+								i.icon-chevron-right
+						img.main-feed__right__text(src="image/main-feed-text.png")
+
+					section.main-feed__info
+						h1.main-feed__title О компании
+						p.main-feed__text Эдлайн — член Союза дизайнеров России и ведущая компания в сфере дизайна городской среды, праздничного оформления и малых архитектурных форм уже более 20 лет.
+						a(href="#", class="link-article__inner") Подробнее
+							i.icon-angle-right-gray
+
+					section.main-feed__author
+						img(src="image/author.jpg", class="main-feed__author__image")
+						.main-feed__author__content
+							.main-feed__author__title Черняк Мария Александровна
+							p Шеф-дизайнер ООО «ЭДЛАЙН»
+							p Вице-презедент национальной ассоциации Гильдии профессионалов ландшафтной индустрии 2003-2012 гг.
+							p Вице-президент Союза дизайнеров России
+
+				.articlle-vertical
+					.articlle-vertical__title Наш дизайн
+					.articlle-vertical__items
+						a(href="#", class="articlle-vertical__item")
+							span.articlle-vertical__image-wrap
+								img(src="image/1.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Фигуры в центре Москвы к Новому году 2018
+						a(href="#", class="articlle-vertical__item")
+							span.articlle-vertical__image-wrap
+								img(src="image/2.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Правильное название объекта дизайна
+						a(href="#", class="articlle-vertical__item")
+							span.articlle-vertical__image-wrap
+								img(src="image/3.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Правильное название объекта дизайна
+					div.link-article
+						a(href="#", class="link-article__inner") Загрузить еще
+							i.icon-angle-right-gray
+
+				.articlle-anonce
+					.articlle-anonce__title Пресс-центр
+					.articlle-anonce__items
+						a(href="#", class="articlle-anonce__item articlle-anonce__item--video")
+							span.articlle-anonce__image-wrap
+								img(src="image/4.jpg", class="articlle-anonce__image")
+								span.articlle-anonce__play
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 20.06.2018
+								span.articlle-anonce__info Сюжет в программе 
+							.articlle-anonce__name Круг света 2012, ТВЦ
+
+						a(href="#", class="articlle-anonce__item")
+							span.articlle-anonce__image-wrap
+								img(src="image/5.jpg", class="articlle-anonce__image")
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 03.06.2017
+								span.articlle-anonce__info Интервью
+							.articlle-anonce__name Журнал Московские торги 
+					div.link-article
+						a(href="#", class="link-article__inner") Перейти в раздел
+							i.icon-angle-right-gray
+							i.icon-angle-right-gray

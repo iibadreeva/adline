@@ -22,6 +22,10 @@
 }
 
 $mainColor: #1e1e1e;
+$colorLink: #606060;
+$footerBg: $mainColor;
+$progressColor: $mainColor;
+$minWidth: 768px;
 
 @import "layout/fonts";
 @import "layout/main";

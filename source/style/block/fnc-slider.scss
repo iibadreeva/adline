@@ -33,7 +33,6 @@ $heightSliderM: 450px;
   left: 0;
   top: 0;
   width: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 
   @include phones(){
@@ -60,7 +59,7 @@ $heightSliderM: 450px;
     min-height: 862px;
     background-size: auto 862px;
     @include phones() {
-      height: 718;
+      height: 718px;
     }
   }
   &__bottom {
@@ -72,6 +71,10 @@ $heightSliderM: 450px;
     z-index: 2;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+    @include phones(){
+      height: 5px;
+    }
   }
 
   &__content {
@@ -87,13 +90,45 @@ $heightSliderM: 450px;
       bottom: 30px;
     }
   }
+  
+  &__heading-wrap {
+    position: relative;
+  }
+
+  &__heading-hidden {
+    position: absolute;
+    z-index: 1;
+  }
 
   &__heading {
+    display: none;
     text-transform: inherit;
+    background-position: -80px -105px;
+    background-repeat: no-repeat;
+    background-size: auto 862px;
+    position: relative;
+    z-index: 2;
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
 
     @include phones() {
       margin-bottom: 115px;
     }
+
+    /*@include phones() {
+      display: block;
+      text-fill-color: none;
+      background-clip: none;
+      background: none;
+    }*/
   }
 
   &__title {
@@ -188,6 +223,10 @@ $heightSliderM: 450px;
 .m--active-slide .fnc-slide__image {
   animation: bg 7s linear infinite;
 }
+.m--active-slide .fnc-slide__heading {
+  animation: bg2 7s linear infinite;
+  display: block;
+}
 
 .credits-active .example-slider {
   transform: translate3d(-400px, 0, 0) rotateY(10deg) scale(0.9);
@@ -195,11 +234,20 @@ $heightSliderM: 450px;
 .example-slider .fnc-slide-1 .fnc-slide__image {
   background-image: url("../image/assets/1.png");
 }
+.example-slider .fnc-slide-1 .fnc-slide__heading {
+  background-image: url("../image/assets/1-1.png");
+}
 .example-slider .fnc-slide-2 .fnc-slide__image {
   background-image: url("../image/assets/2.png");
 }
+.example-slider .fnc-slide-2 .fnc-slide__heading {
+  background-image: url("../image/assets/2-2.png");
+}
 .example-slider .fnc-slide-3 .fnc-slide__image {
   background-image: url("../image/assets/3.png");
+}
+.example-slider .fnc-slide-3 .fnc-slide__heading {
+  background-image: url("../image/assets/3-3.png");
 }
 .example-slider .fnc-slide__heading,
 .example-slider .fnc-slide__action-btn,
@@ -315,6 +363,13 @@ $heightSliderM: 450px;
   transform: scaleX(0) !important;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .example-slider .fnc-slide .fnc-slide__heading {
+    background: none;
+    -webkit-text-fill-color: none;
+  }
+}
+
 
 @keyframes bg {
   from {
@@ -323,5 +378,14 @@ $heightSliderM: 450px;
 
   to {
     transform: translateY(0px);
+  }
+}
+@keyframes bg2 {
+  from {
+    background-position: -80px -255px;
+  }
+
+  to {
+    background-position: -80px -355px;
   }
 }

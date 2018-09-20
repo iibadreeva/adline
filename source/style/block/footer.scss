@@ -1,0 +1,172 @@
+.footer {
+  @include big(){
+    font-size: 14px;
+  }
+
+  @include tablets(){
+    font-size: 9px;
+  }  
+
+  &__top {
+    border-top: 3px solid $progressColor;
+    padding: 33px 0 15px 0;
+    font-family: "GothamPro-Medium";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include tablets(){
+      padding: 21px 0 12px 0;
+    }
+
+    &__copy {
+      flex: 1 1 198px;
+
+      @include tablets(){
+        flex: 1 1 121px;
+      }
+    }
+
+    &__right {
+      order: 3;
+      padding-right: 8px;
+
+      @include tablets(){
+        padding-right: 5px;
+      }
+    }
+
+    &__menu {
+      order: 2;
+      flex: 1 1 475px;
+      display: flex;
+
+      @include tablets(){
+        flex: 1 1 285px;
+      }
+    }
+
+    &__items {
+      list-style-type: none;
+
+      &:nth-child(1){
+        width: 58%;
+      }
+    }
+
+    &__link {
+      color: $mainColor;
+      text-decoration: none;
+    }
+
+    &__share {
+      width: 17px;
+      height: 18px;
+      background: url(../image/share-top.png) no-repeat;
+      cursor: pointer;
+      background-size: contain;
+      display: inline-block;
+      margin: -4px 30px 0 0;
+      position: relative;
+      top: 3px;
+
+      @include big(){
+      }
+      @include tablets(){
+        width: 10px;
+        height: 11px;
+        margin-right: 18px;
+      }
+      @include phones(){
+      }
+    }
+
+    &__list {
+      margin-bottom: 22px;
+
+      @include tablets(){
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+
+
+  &__bottom {
+    background: $footerBg;
+    color: #fff;
+    padding: 23px 0 30px;
+
+    @include tablets(){
+      padding: 16px 0 25px;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__adress {
+      flex: 1 1 198px;
+
+      @include tablets(){
+        flex: 1 1 146px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: row;
+      flex: 1 1 475px;
+
+      @include tablets(){
+        flex: 1 1 285px;
+      }
+    }
+
+    &__back {
+      width: 75px;
+    }
+
+    &__link {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &__contacts {
+      width: 58%;
+
+      @include tablets(){
+        width: 62%;
+      }
+    }
+
+    &__social-link {
+      color: #fff;
+      text-decoration: none;
+
+      &:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        background: #444444;
+        height: 1px;
+      }
+
+      &:hover {
+        &:after {
+          background: transparent;
+        }
+      }
+    }
+
+    &__margin {
+      margin-bottom: 10px;
+
+      @include tablets(){
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
