@@ -1,12 +1,42 @@
 .articlle-anonce {
   padding-bottom: 92px;
 
+  @include tablets(){
+    font-size: 9px;
+    padding-bottom: 52px;
+  }
+
+  @include phones(){
+    font-size: 14px;
+    padding-bottom: 60px;
+  }
+
   &__title {
     font-size: 26px;
     font-family: 'GothamPro-Medium';
-    border-bottom: 3px solid $progressColor;
-    padding-bottom: 19px;
     margin-bottom: 50px;
+
+    .progress {
+      margin-top: 19px;
+
+      @include tablets(){
+        margin-top: 13px;
+      }
+
+      @include phones(){
+        margin-top: 24px;
+      }
+    }
+
+    @include tablets(){
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    @include phones(){
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
   }
 
   &__items {
@@ -14,6 +44,16 @@
     flex-direction: row;
     margin-right: -30px;
     margin-bottom: 65px;
+
+    @include tablets(){
+      margin-bottom: 40px;
+      margin-right: -23px;
+    }
+
+    @include phones(){
+      flex-direction: column;
+      margin-bottom: 18px;
+    }
   }
 
   &__item {
@@ -21,8 +61,21 @@
     margin-right: 30px;
     flex: 1 1 auto;
 
+    @include tablets(){
+      margin-right: 23px;
+    }
+
+    @include phones(){
+      margin-right: 0;
+      padding-bottom: 10px;
+    }
+
     &--video {
       flex: 2 1 730px;
+
+      @include phones(){
+        flex: 1 1 auto;
+      }
 
       .articlle-anonce__image-wrap {
         position: relative;
@@ -75,6 +128,11 @@
 
     @include tablets() {
       max-height: 218px;
+      margin-bottom: 9px;
+    }
+
+    @include phones(){
+      margin-bottom: 20px;
     }
   }
 

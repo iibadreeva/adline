@@ -1,0 +1,207 @@
+.articlle-realty {
+  padding-bottom: 87px;
+
+  @include tablets(){
+    padding-bottom: 50px;
+  }
+
+  @include phones(){
+  }
+
+  &__title {
+    font-size: 20px;
+    font-family: 'GothamPro-Medium';
+    //border-bottom: 3px solid $progressColor;
+    //padding-bottom: 17px;
+    margin-bottom: 55px;
+
+    .progress {
+      margin-top: 17px;
+
+      @include tablets(){
+        margin-top: 10px;
+      }
+
+      @include phones(){
+        margin-top: 23px;
+      }
+    }
+
+    @include tablets(){
+      font-size: 12px;
+      margin-bottom: 32px;
+    }
+
+    @include phones(){
+      font-size: 16px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__items {
+    //display: flex;
+    //flex-direction: row;
+    margin-right: -30px;
+    margin-bottom: 0;
+    font-size: 0;
+
+    @include tablets(){
+      margin-right: -24px;
+    }
+
+    @include phones(){
+    }
+
+    &--last {
+      margin-bottom: 45px;
+
+      @include tablets(){
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__item {
+    text-decoration: none;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;    
+
+    @include phones() {
+      width: 100%;
+    }
+  }
+
+  &__item-big {
+    text-decoration: none;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;    
+
+    @include phones() {
+      width: 100%;
+    }
+  }
+
+  &__wrap {
+    width: 50%;
+    display: inline-block;
+
+    @include phones() {
+      width: 100%;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__inner {
+    margin-right: 30px;
+    display: block;
+
+    @include tablets(){
+      margin-right: 24px;
+    }
+
+    @include phones(){
+    }
+  }
+
+  &__image-big-wrap {
+    display: block;
+    height: 393px;
+    min-height: 217px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @include big() {
+      height: 387px;
+    }
+
+    @include tablets() {
+      height: 237px;
+      margin-bottom: 7px;
+    }
+
+    @include phones() {
+      height: 297px;
+      margin-bottom: 20px;
+    }
+    
+  }
+
+  &__image-wrap {
+    display: block;
+    height: 160px;
+    min-height: 96px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+
+
+    @include tablets() {
+      height: 96px;
+      margin-bottom: 7px;
+    }
+    @include phones() {
+      height: 297px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &__name {
+    color: $mainColor;
+    line-height: 1.4;
+    font-size: $mainFont;
+    overflow: hidden;
+    height: 65px;
+    display: -webkit-box;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.4;
+    text-align: left;
+
+    @include big(){
+      font-size: 14px;
+      height: 57px;
+    }
+
+    @include tablets(){
+      font-size: 9px;
+      height: 37px;
+    }
+
+    @include phones(){
+      font-size: 12px;
+      height: 55px;
+    }
+
+    &--small {
+      font-size: $mainFont - 1;
+
+      @include big(){
+        font-size: 13px;
+      }
+
+      @include tablets(){
+        font-size: 8px;
+      }
+
+      @include phones(){
+        font-size: 12px;
+      }
+    }
+  }
+
+
+}

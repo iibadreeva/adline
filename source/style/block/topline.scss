@@ -5,7 +5,6 @@
   right: 0;
   overflow: hidden;
   overflow-y: scroll;
-  display: flex;
   flex-direction: column;
   list-style-type: none;
   align-items: flex-start;
@@ -19,6 +18,7 @@
   background: #fff;
   transition: 0.3s;
   transform: translateX(100%);
+  display: none;
 
   &__item {
     list-style-type: none;
@@ -32,6 +32,10 @@
   &__link {
     color: $mainColor;
     text-decoration: none;
+  }
+
+  @include phones() {
+    display: flex;
   }
 
 }

@@ -1,4 +1,6 @@
 $height: 320px;
+$heightTablets: 188px;
+$heightMobile: 320px;
 
 .simple-slider {
   position: relative;
@@ -8,6 +10,20 @@ $height: 320px;
   text-align: left;
   cursor: pointer;
 
+  @include tablets(){
+    width: 135px;
+    height: $heightTablets;
+    margin-bottom: 33px;
+  }
+
+  @include phones(){
+    margin: 0 auto 38px;
+    // width: 100%;
+    width: calc(100% - 50px);
+    padding: 0 25px;
+    height: $heightMobile;
+  }
+
   &__wrap {
     position: absolute;
     top: 0px;
@@ -16,6 +32,14 @@ $height: 320px;
     width: 100%;
     height: $height;
     overflow: hidden;
+
+    @include tablets(){
+      height: $heightTablets;
+    }
+
+    @include phones(){
+      height: $heightMobile;
+    }
   }
 
   &__zoom {
@@ -25,8 +49,20 @@ $height: 320px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
     z-index: 2;
+  }
+
+  &__img {
+
+    @include tablets(){
+      width: 64px;
+    }
+
+    @include phones(){
+      width: 107px;
+    }
+    
   }
 
   &__image {
@@ -49,6 +85,14 @@ $height: 320px;
       width: 100%;
       background: linear-gradient(45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+
+      @include tablets(){
+        height: $heightTablets;
+      }
+
+      @include phones(){
+        height: $heightMobile;
+      }
     }
   }
   
@@ -56,6 +100,14 @@ $height: 320px;
     color: #fff;
     position: relative;
     line-height: 1.3;
+
+    @include tablets(){
+      font-size: 9px;
+    }
+
+    @include phones(){
+      font-size: 15px;
+    }
   }
 
   &__link {
@@ -78,6 +130,30 @@ $height: 320px;
       right: -32px;
       border-right: none;
       border-left: 10px solid $mainColor;
+
+      @include tablets(){
+        right: -19px;
+        border-left: 6px solid $mainColor;
+      }
+
+      @include phones(){
+        right: -7px;
+        border-left: 10px solid $mainColor;
+      }
+    }
+
+    @include tablets(){
+      border-top: 4px solid transparent;
+      border-right: 6px solid $mainColor;
+      border-bottom: 4px solid transparent;
+      left: -24px;
+    }
+
+    @include phones(){
+      border-top: 7px solid transparent;
+      border-right: 10px solid $mainColor;
+      border-bottom: 7px solid transparent;
+      left: -14px;
     }
   }
 

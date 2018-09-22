@@ -14,7 +14,7 @@ block content
 
 			article.window__inner
 				.main-feed
-					section.main-feed__right
+					section(class="main-feed__right wow fadeIn", data-wow-offset="100" data-wow-delay="0.8s")
 						.simple-slider
 							.simple-slider__wrap.js-slider
 								.simple-slider__image(style="background-image: url(image/simple-slide-1.jpg")
@@ -24,49 +24,113 @@ block content
 								.simple-slider__image(style="background-image: url('https://www.bl-g.ru/about/diplomas/nagrady_russian_design_2011.JPG")
 									.simple-slider__title Российский национальный приз в области дизайна 3
 							.simple-slider__zoom
-							a(href="#", class="simple-slider__link js-slider-link") left
+							a(href="#", class="simple-slider__link js-slider-link")
 								i.icon-chevron-left
-							a(href="#", class="simple-slider__link js-slider-link") right
+							a(href="#", class="simple-slider__link js-slider-link")
 								i.icon-chevron-right
-						img.main-feed__right__text(src="image/main-feed-text.png")
+						img.simple-slider__img(src="image/main-feed-text.png")
 
-					section.main-feed__info
+					section(class="main-feed__info wow fadeIn", data-wow-offset="100" data-wow-delay="0.4s")
 						h1.main-feed__title О компании
 						p.main-feed__text Эдлайн — член Союза дизайнеров России и ведущая компания в сфере дизайна городской среды, праздничного оформления и малых архитектурных форм уже более 20 лет.
 						a(href="#", class="link-article__inner") Подробнее
 							i.icon-angle-right-gray
 
-					section.main-feed__author
-						img(src="image/author.jpg", class="main-feed__author__image")
+					section(class="main-feed__author")
+						img(src="image/author.jpg", class="main-feed__author__image wow fadeIn" data-wow-offset="70" data-wow-delay="1.2s")
 						.main-feed__author__content
-							.main-feed__author__title Черняк Мария Александровна
-							p Шеф-дизайнер ООО «ЭДЛАЙН»
-							p Вице-презедент национальной ассоциации Гильдии профессионалов ландшафтной индустрии 2003-2012 гг.
-							p Вице-президент Союза дизайнеров России
+							.main-feed__author__title 
+								span(class="wow fadeIn", data-wow-offset="100" data-wow-delay="1.6s") Черняк Мария Александровна
+								span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
+							p(class="wow fadeIn" data-wow-offset="70" data-wow-delay="1.2s") Шеф-дизайнер ООО «ЭДЛАЙН»
+							p(class="wow fadeIn" data-wow-offset="70" data-wow-delay="1.2s") Вице-презедент национальной ассоциации Гильдии профессионалов ландшафтной индустрии 2003-2012 гг.
+							p(class="wow fadeIn" data-wow-offset="70" data-wow-delay="1.2s") Вице-президент Союза дизайнеров России
+
 
 				.articlle-vertical
-					.articlle-vertical__title Наш дизайн
+					div(class="articlle-vertical__title")
+						span(class="wow fadeIn", data-wow-offset="70" data-wow-delay="1.6s") Наш дизайн
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-delay="0.5s" data-wow-duration="2s")
 					.articlle-vertical__items
-						a(href="#", class="articlle-vertical__item")
-							span.articlle-vertical__image-wrap
+						a(href="#", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s")
+							span(class="articlle-vertical__image-wrap")
 								img(src="image/1.jpg", class="articlle-vertical__image")
 							.articlle-vertical__name Фигуры в центре Москвы к Новому году 2018
-						a(href="#", class="articlle-vertical__item")
+						a(href="#", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
 							span.articlle-vertical__image-wrap
 								img(src="image/2.jpg", class="articlle-vertical__image")
 							.articlle-vertical__name Правильное название объекта дизайна
-						a(href="#", class="articlle-vertical__item")
+						a(href="#", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.5s")
 							span.articlle-vertical__image-wrap
 								img(src="image/3.jpg", class="articlle-vertical__image")
 							.articlle-vertical__name Правильное название объекта дизайна
 					div.link-article
-						a(href="#", class="link-article__inner") Загрузить еще
+						a(href="#", class="link-article__inner wow fadeIn" data-wow-offset="50" data-wow-delay="2.0s") Загрузить еще
 							i.icon-angle-right-gray
 
+
+				.articlle-realty
+					div(class="articlle-realty__title")
+						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Реализованные проекты
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
+					.articlle-realty__items
+						a(href="#", class="articlle-realty__item-big wow fadeIn" data-wow-offset="100" data-wow-delay="0.7s")
+							span.articlle-realty__inner
+								span(class="articlle-realty__image-big-wrap" style="background-image: url(../image/6.jpg);")
+									//- img(src="image/6.jpg", class="articlle-realty__image")
+								.articlle-realty__name Фонтан на Крымской набережной 
+									br
+									| в парке Музеон
+						.articlle-realty__wrap
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/7.jpg);")
+										//- img(src="image/7.jpg", class="articlle-realty__image")
+									.articlle-realty__name Светомузыкальный фонтан в Царицыно
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.2s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/8.jpg);")
+										//- img(src="image/8.jpg", class="articlle-realty__image")
+									.articlle-realty__name ММФС «Круг света»
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.4s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/9.jpg);")
+										//- img(src="image/9.jpg", class="articlle-realty__image")
+									.articlle-realty__name.articlle-realty__name--small Праздничное оформление города Москвы к Новому Году 2013-2015 г.
+
+					.articlle-realty__items.articlle-realty__items--last
+						.articlle-realty__wrap.articlle-realty__wrap--right
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.6s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/10.jpg);")
+										//- img(src="image/10.jpg", class="articlle-realty__image")
+									.articlle-realty__name Цикл фестивалей «Московские сезоны»
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.8s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/11.jpg);")
+										//- img(src="image/11.jpg", class="articlle-realty__image")
+									.articlle-realty__name ММФС «Рождественский свет»
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="2.0s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/12.jpg);")
+										//- img(src="image/12.jpg", class="articlle-realty__image")
+									.articlle-realty__name.articlle-realty__name--small Светомузыкальный фонтан в ЦПКиО им. М. Горокого
+						a(href="#", class="articlle-realty__item-big wow fadeIn" data-wow-offset="10" data-wow-delay="2.2s")
+							span.articlle-realty__inner
+								span(class="articlle-realty__image-big-wrap" style="background-image: url(../image/13.jpg);")
+									//- img(src="image/13.jpg", class="articlle-realty__image")
+								.articlle-realty__name ММДЦ «Москва-Сити»
+					div.link-article
+						a(href="#", class="link-article__inner wow fadeIn" data-wow-offset="10" data-wow-delay="2.4s") Загрузить еще
+							i.icon-angle-right-gray
+
+
 				.articlle-anonce
-					.articlle-anonce__title Пресс-центр
+					div(class="articlle-anonce__title")
+						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Пресс-центр
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
 					.articlle-anonce__items
-						a(href="#", class="articlle-anonce__item articlle-anonce__item--video")
+						a(href="#", class="articlle-anonce__item articlle-anonce__item--video wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
 							span.articlle-anonce__image-wrap
 								img(src="image/4.jpg", class="articlle-anonce__image")
 								span.articlle-anonce__play
@@ -75,7 +139,7 @@ block content
 								span.articlle-anonce__info Сюжет в программе 
 							.articlle-anonce__name Круг света 2012, ТВЦ
 
-						a(href="#", class="articlle-anonce__item")
+						a(href="#", class="articlle-anonce__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.5s")
 							span.articlle-anonce__image-wrap
 								img(src="image/5.jpg", class="articlle-anonce__image")
 							.articlle-anonce__sub-title
@@ -83,6 +147,6 @@ block content
 								span.articlle-anonce__info Интервью
 							.articlle-anonce__name Журнал Московские торги 
 					div.link-article
-						a(href="#", class="link-article__inner") Перейти в раздел
+						a(href="#", class="link-article__inner wow fadeIn" data-wow-offset="70" data-wow-delay="1.7s") Перейти в раздел
 							i.icon-angle-right-gray
 							i.icon-angle-right-gray

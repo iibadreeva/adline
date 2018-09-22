@@ -1,3 +1,8 @@
+@mixin bigger() {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
 @mixin big() {
   @media screen and (max-width: 1120px) {
     @content;
@@ -10,7 +15,7 @@
 }
 
 @mixin tablets() {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 779px) {//768
     @content;
   }
 }
@@ -22,13 +27,16 @@
 }
 
 $mainColor: #1e1e1e;
+$mainFont: 15px;
 $colorLink: #606060;
 $footerBg: $mainColor;
 $progressColor: $mainColor;
+$progressColorGrey: #f6f6f6;
 $minWidth: 768px;
 
 @import "layout/fonts";
 @import "layout/main";
+@import "layout/animate";
 
 @import "block/**/*.scss";
 

@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   line-height: 1;
-  font-size: 15px;
+  font-size: $mainFont;
   height: 100%;
   font-family: 'GothamPro', sans-serif;
   background-color: #fff;
@@ -48,6 +48,14 @@ p {
   //padding: 0 50px;
   max-width: 1280px;
   min-width: $minWidth;
+
+
+
+  @media screen and (min-width: 1920px) {
+    @include bigger() {
+      transform: scale(1.4) translateY(14%);
+    }
+  }
 
   @include phones(){
     min-width: 100%;
@@ -98,6 +106,15 @@ p {
       position: relative;
       top: -2px;
       left: 5px;
+
+      @include tablets(){
+        top: -1px;
+        left: 2px;
+      }
+      @include phones(){
+        top: -2px;
+        left: 5px;
+      }
     }
 
     &:after {
@@ -113,5 +130,28 @@ p {
         background: transparent;
       }
     }
+
+    @include tablets(){
+      font-size: 12px;
+    }
+
+    @include phones(){
+      font-size: 14px;
+    }
+  }
+
+  @include phones(){
+    text-align: left;
+  }
+}
+
+.progress {
+  display: block;
+  height: 3px;
+  //margin-top: 14px;
+  background: $progressColor;
+
+  @include tablets(){
+    height: 2px;
   }
 }

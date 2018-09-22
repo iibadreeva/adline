@@ -11,12 +11,15 @@ mixin sliderIndex(obj)
 							.fnc-slide__heading-wrap
 								span.fnc-slide__heading-hidden
 									.fnc-slide__title= item.titleTop
-									.fnc-slide__title= item.titleBottom
+									if item.titleBottom != false
+										.fnc-slide__title= item.titleBottom
 								h2.fnc-slide__heading
 									.fnc-slide__title= item.titleTop
-									.fnc-slide__title= item.titleBottom
-							.fnc-slide__text= item.textTop
-							.fnc-slide__text= item.textBottom
+									if item.titleBottom != false
+										.fnc-slide__title= item.titleBottom
+							div
+								.fnc-slide__text= item.textTop
+								.fnc-slide__text= item.textBottom
 							a(href="#", class="fnc-slide__btn") смотреть категорию
 								i.icon-angle-right-white
 			else
@@ -28,12 +31,15 @@ mixin sliderIndex(obj)
 							.fnc-slide__heading-wrap
 								span.fnc-slide__heading-hidden
 									.fnc-slide__title= item.titleTop
-									.fnc-slide__title= item.titleBottom
+									if item.titleBottom  != false
+										.fnc-slide__title= item.titleBottom
 								h2.fnc-slide__heading
 									.fnc-slide__title= item.titleTop
-									.fnc-slide__title= item.titleBottom
-							.fnc-slide__text= item.textTop
-							.fnc-slide__text= item.textBottom
+										if item.titleBottom  != false
+											.fnc-slide__title= item.titleBottom
+							div
+								.fnc-slide__text= item.textTop
+								.fnc-slide__text= item.textBottom
 							a(href="#", class="fnc-slide__btn") смотреть категорию
 								i.icon-angle-right-white
 

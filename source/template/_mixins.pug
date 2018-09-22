@@ -4,3 +4,4 @@ mixin nav(className, items, activeItem)
 			li(class=(activeItem === item.name) ? `${className}__item active`: `${className}__item`)
 				a(class=`${className}__link`, href=`${item.url}`)= item.title
 
+

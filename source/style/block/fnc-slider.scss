@@ -73,7 +73,7 @@ $heightSliderM: 450px;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 
     @include phones(){
-      height: 5px;
+      height: 50px;
     }
   }
 
@@ -88,16 +88,34 @@ $heightSliderM: 450px;
       right: 5%;
       text-align: center;
       bottom: 30px;
+
+      text-align: center;
+      bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      justify-content: space-between;
     }
   }
   
   &__heading-wrap {
     position: relative;
+
+    @include phones() {
+      order: 3;
+      height: 200px;
+    }
   }
 
   &__heading-hidden {
     position: absolute;
+    left: 0;
     z-index: 1;
+
+    @include phones() {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__heading {
@@ -121,6 +139,9 @@ $heightSliderM: 450px;
 
     @include phones() {
       margin-bottom: 115px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     /*@include phones() {
@@ -162,15 +183,17 @@ $heightSliderM: 450px;
     @include phones() {
       font-size: 18px;
       text-align: left;
-      position: absolute;
-      top: -91px;
+      order: 1;
+      // position: absolute;
+      // top: -91px;
     }
 
     &:nth-child(3){
       margin-bottom: 40px;
 
       @include phones() {
-        top: -69px;
+        // top: -69px;
+        order: 2;
       }
     }
   }
@@ -188,6 +211,8 @@ $heightSliderM: 450px;
     @include phones() {
       font-size: 10px;
       padding: 14px 50px;
+      order: 4;
+      margin: 0 22px;
     }
 
     i {

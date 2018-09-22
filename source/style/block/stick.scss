@@ -1,0 +1,11 @@
+.stick {
+  display: flex;
+  flex-direction: row;
+
+  &__left {
+    flex-basis: 362px;
+    margin-right: 20px;
+  }
+
+  &__right {}
+}

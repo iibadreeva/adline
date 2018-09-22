@@ -1,35 +1,89 @@
 .articlle-vertical {
-  padding-bottom: 30px;
+  padding-bottom: 85px;
+
+  @include tablets() {
+    padding-bottom: 50px;
+  }
 
   &__title {
     font-size: 20px;
     font-family: 'GothamPro-Medium';
-    border-bottom: 3px solid $progressColor;
-    padding-bottom: 17px;
+    //border-bottom: 3px solid $progressColor;
+    //padding-bottom: 17px;
     margin-bottom: 55px;
+
+    .progress {
+      margin-top: 17px;
+
+      @include tablets(){
+        margin-top: 11px;
+      }
+
+      @include phones(){
+        margin-top: 22px;        
+      }
+    }
+
+    @include tablets(){
+      font-size: 12px;
+      margin-bottom: 32px;
+    }
+
+    @include phones(){
+      font-size: 16px;      
+      margin-bottom: 26px;
+    }
   }
 
   &__items {
     display: flex;
     flex-direction: row;
     margin-right: -32px;
-    margin-bottom: 74px;
+    margin-bottom: 55px;
+
+    @include tablets(){
+      margin-right: -22px;
+      margin-bottom: 44px;
+    }
+
+    @include phones(){
+      flex-direction: column;
+      margin-bottom: 7px;
+    }
+
+    &--bottom {
+      margin-bottom: 78px;
+    }
   }
 
   &__item {
     text-decoration: none;
     margin-right: 32px;
+
+    @include tablets(){
+      margin-right: 22px;
+    }
+
+    @include phones(){
+    }
   }
 
   &__image-wrap {
     display: block;
     max-height: 363px;
-    min-height: 218px;
+    //min-height: 218px;
     overflow: hidden;
     margin-bottom: 16px;
 
     @include tablets() {
       max-height: 218px;
+      margin-bottom: 10px;
+    }
+
+    @include phones(){
+      max-height: none;
+      min-height: 302px;
+      margin-bottom: 18px;
     }
   }
 
@@ -42,39 +96,16 @@
     width: 70%;
     color: $mainColor;
     line-height: 1.4;
-  }
 
-  //&__link {
-  //  text-align: center;
-  //
-  //  &__inner {
-  //    color: $colorLink;
-  //    text-decoration: none;
-  //    font-size: 20px;
-  //    font-family: 'GothamPro-Medium';
-  //    display: inline-block;
-  //
-  //    i {
-  //      position: relative;
-  //      top: -2px;
-  //      left: 5px;
-  //    }
-  //
-  //    &:after {
-  //      content: " ";
-  //      display: block;
-  //      width: 100%;
-  //      background: #afafaf;
-  //      height: 1px;
-  //    }
-  //
-  //    &:hover {
-  //      &:after {
-  //        background: transparent;
-  //      }
-  //    }
-  //  }
-  //}
+    @include tablets(){
+      font-size: 9px;
+    }
+
+    @include phones(){
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+  }
 
 
 }

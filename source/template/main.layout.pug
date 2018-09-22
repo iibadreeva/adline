@@ -12,8 +12,8 @@ include ./_mixins.pug
 		textTop: 'Палитра хорошего',
 		textBottom: 'настроения городской жизни2'
 	},{
-		titleTop: 'ивенты и',
-		titleBottom: 'мероприятия',
+		titleTop: 'ивенты',
+		titleBottom: false,
 		textTop: 'Палитра хорошего',
 		textBottom: 'настроения городской жизни3'
 	}]
@@ -21,8 +21,8 @@ include ./_mixins.pug
 -
 	var nav = [{
 			title:"Проекты",
-			url: "progect.html",
-			name: "progect"
+			url: "projects.html",
+			name: "projects"
 		},{
 			title:"Наш дизайн",
 			url: "design.html",
@@ -62,7 +62,5 @@ html(lang='ru')
 			block content
 
 			include ./block/footer.pug
-	
-	script(src="js/bower/jquery/dist/jquery.js")
-	script(src="js/bower/simple-slider/dist/simpleslider.min.js")
-	script(src="js/main.js?v=1")
+
+	script(src="js/main.js")
