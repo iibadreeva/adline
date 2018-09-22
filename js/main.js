@@ -203,26 +203,12 @@ try{ appStyles.init(); }catch (e){}
 //slider main animation
 fncSlider(".example-slider", {autoSlidingDelay: 4000});
 //mini slider
-const slider = document.querySelector('.js-slider');
-// const slider = $('.js-slider');
-const  left = document.querySelectorAll('.js-slider-link')[1],
-    right = document.querySelectorAll('.js-slider-link')[0];
-let isNext = true;
+const sliderS = document.querySelector('.js-slider-two');
+let isNextS = true;
 
 try{
-    // const imgSlider = simpleslider.getSlider({
-    //     container: slider,
-    //     prop: 'left',
-    //     init: -100,
-    //     show: 0,
-    //     delay: 3.2,
-    //     duration: 1,
-    //     end: 100,
-    //     unit: '%',
-    //     ease: bounceOut
-    // });
-    const imgSlider = simpleslider.getSlider({
-        container: slider,
+    var imgSliderS = simpleslider.getSlider({
+        container: sliderS,
         prop: 'opacity',
         init: '',
         show: 1,
@@ -238,44 +224,29 @@ try{
     for(var i =0; 0 <= rightS.length; i++){
         rightS[i].addEventListener('click', function (e) {
             console.log('right');
-            if (isNext) {
-                imgSlider.reverse();
-                isNext = false;
+            if (isNextS) {
+                imgSliderS.reverse();
+                isNextS = false;
             }
-            imgSlider.next();
+            imgSliderS.next();
             e.preventDefault();
-            imgSlider.pause();
+            // imgSliderS.pause();
         });
         leftS[i].addEventListener('click', function (e) {
             console.log('left');
-            if (!isNext) {
-                imgSlider.reverse();
-                isNext = true;
+            if (!isNextS) {
+                imgSliderS.reverse();
+                isNextS = true;
             }
-            imgSlider.next();
+            imgSliderS.next();
             e.preventDefault();
-            imgSlider.pause();
+            // imgSliderS.pause();
         });
     }
 
 
-    left.addEventListener('click', function (e) {
-        if (!isNext) {
-            imgSlider.reverse();
-            isNext = true;
-        }
-        imgSlider.next();
-        e.preventDefault();
-    });
-    right.addEventListener('click', function (e) {
-        if (isNext) {
-            imgSlider.reverse();
-            isNext = false;
-        }
-        imgSlider.next();
-        e.preventDefault();
-    });
-    imgSlider.pause();
+
+    // imgSliderS.pause();
 }catch (e){}
 //animate content
 new WOW().init();
