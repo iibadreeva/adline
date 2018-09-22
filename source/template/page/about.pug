@@ -17,19 +17,33 @@ block content
 
 			.stick.window__inner
 				.stick__left
-					.simple-slider
-						.simple-slider__wrap.js-slider
-							.simple-slider__image(style="background-image: url(image/simple-slide-1.jpg")
-								.simple-slider__title Российский национальный приз в области дизайна «Виктория»
-							.simple-slider__image(style="background-image: url('http://www.mironova-design.ru/I/awards/avard_.jpg")
-								.simple-slider__title Российский национальный приз в области дизайна2
-							.simple-slider__image(style="background-image: url('https://www.bl-g.ru/about/diplomas/nagrady_russian_design_2011.JPG")
-								.simple-slider__title Российский национальный приз в области дизайна 3
-						.simple-slider__zoom
-						a(href="#", class="simple-slider__link js-slider-link")
-							i.icon-chevron-left
-						a(href="#", class="simple-slider__link js-slider-link")
-							i.icon-chevron-right
+					.stick__left__inner.js-slick
+						.simple-slider-two
+							.simple-slider-two__wrap.js-slider
+								.simple-slider-two__list
+									span.simple-slider-two__inner
+										img(src="image/simple-slide-1.jpg" class="simple-slider-two__image")
+										span(href="#", class="simple-slider-two__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider-two__link js-slider-link-right")
+											i.icon-chevron-right
+									.simple-slider-two__title Благодарственное письмо за участие в подготовке московской области к празднованию 70-летию победы в Великой отечественной войне
+								.simple-slider-two__list
+									span.simple-slider-two__inner
+										img(src="image/simple-slide-2.jpg" class="simple-slider-two__image")
+										span(href="#", class="simple-slider-two__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider-two__link js-slider-link-right")
+											i.icon-chevron-right
+									.simple-slider-two__title Российский национальный приз в области дизайна «Виктория»
+								.simple-slider-two__list
+									span.simple-slider-two__inner
+										img(src="image/simple-slide-3.jpg" class="simple-slider-two__image")
+										span(href="#", class="simple-slider-two__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider-two__link js-slider-link-right")
+											i.icon-chevron-right
+									.simple-slider-two__title Национальная премия в области флористики и ландшафтного дизайна «Цветок успеха»
 				.stick__right
 					p Основополагающий принцип работы «Эдлайн» – индивидуальный, комплексный поход к решению каждой задачи. Универсальный штат опытных сотрудников позволяет компании работать с проектами по каждому из направлений: концепция, проект, реализация, эксплуатация.
 					p Коллектив компании «Эдлайн» имеет большой опыт в разработке и реализации концепций светового и праздничного оформления города. Активно осваивая зарубежный опыт, специалисты компании старались адаптировать его для российских городов, опираясь на отечественные традиции. Большое внимание в сфере оформления городских территорий специалисты компании уделяют тематическим праздникам. Стоит отметить, что комплексный подход включает в себя не только единую концепцию оформления города, но и программу реализации на несколько лет.
@@ -38,6 +52,7 @@ block content
 					p Используя все свои возможности и опыт, компания «Эдлайн» непосредственно участвует в формировании городской политики в сфере средового дизайна.
 					p За весомый вклад в оформление столицы архитекторы и дизайнеры «Эдлайн» награждены премией Москвы в области архитектуры и искусства, специалистам компании четырежды присвоено звание лауреата премии «Виктория» Союза Дизайнеров России.
 
-			div.link-article
-					a(href="#", class="link-article__inner") Загрузить еще
-						i.icon-angle-right-gray
+
+					div.link-article
+						a(href="#", class="link-article__inner") Загрузить еще
+							i.icon-angle-right-gray
