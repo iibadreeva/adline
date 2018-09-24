@@ -1,7 +1,7 @@
 $heightSlider: 594px;
 $heightSliderT: 663px;
 $heightSliderM: 450px;
-.fnc-slider {
+.fnc-sliders {
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
@@ -26,7 +26,7 @@ $heightSliderM: 450px;
     }
   }
 }
-.fnc-slide {
+.fnc-slides {
   height: $heightSlider;
   overflow: hidden;
   position: absolute;

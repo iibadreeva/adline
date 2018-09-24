@@ -6,12 +6,24 @@ block title
 	title Наш дизайн
 
 block content	
-	+headers('design')
+	+headers('project')
 
-	main.main
+	main
 		.content
+			+sliderZoom(sliderJson)
+			
 			article
 				.window__inner
+					.overview-project
+						.overview-project__title
+							span.overview-project__title__inner
+								span.icon-angle-left-black
+								span.overview-project__title__wrap Все проекты
+						.overview-project__content
+							p Рыба текста про проект, примерно такая как в протопите. Основополагающий принцип работы «Эдлайн» – индивидуальный, комплексный поход крешению каждой задачи. Универсальный штат опытных сотрудников позволяет компанииработать с проектами по каждому из направлений: концепция, проект, реализация, эксплуатация.
+							p Поход крешению каждой задачи. Универсальный штат опытных сотрудников позволяет компанииработать с проектами по каждому из направлений: концепция, проект, реализация, эксплуатация.
+
+
 					.filter
 						.filter__title Участие в проекте:
 						ul.filter__items
@@ -44,7 +56,7 @@ block content
 						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Еще проекты
 						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
 
-					.articlle-realty__items
+					.articlle-realty__items.articlle-realty__items--last
 						a(href="#", class="articlle-realty__item-big wow fadeIn" data-wow-offset="100" data-wow-delay="0.7s")
 							span.articlle-realty__inner
 								span(class="articlle-realty__image-big-wrap" style="background-image: url(../image/6.jpg);")
@@ -64,25 +76,7 @@ block content
 								span.articlle-realty__inner
 									span(class="articlle-realty__image-wrap" style="background-image: url(../image/9.jpg);")
 									.articlle-realty__name.articlle-realty__name--small Праздничное оформление города Москвы к Новому Году 2013-2015 г.
-
-					.articlle-realty__items.articlle-realty__items--last
-						.articlle-realty__wrap.articlle-realty__wrap--right
-							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.6s")
-								span.articlle-realty__inner
-									span(class="articlle-realty__image-wrap" style="background-image: url(../image/10.jpg);")
-									.articlle-realty__name Цикл фестивалей «Московские сезоны»
-							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.8s")
-								span.articlle-realty__inner
-									span(class="articlle-realty__image-wrap" style="background-image: url(../image/11.jpg);")
-									.articlle-realty__name ММФС «Рождественский свет»
-							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="2.0s")
-								span.articlle-realty__inner
-									span(class="articlle-realty__image-wrap" style="background-image: url(../image/12.jpg);")
-									.articlle-realty__name.articlle-realty__name--small Светомузыкальный фонтан в ЦПКиО им. М. Горокого
-						a(href="#", class="articlle-realty__item-big wow fadeIn" data-wow-offset="10" data-wow-delay="2.2s")
-							span.articlle-realty__inner
-								span(class="articlle-realty__image-big-wrap" style="background-image: url(../image/13.jpg);")
-								.articlle-realty__name ММДЦ «Москва-Сити»
+									
 					div.link-article
 						a(href="#", class="link-article__inner wow fadeIn" data-wow-offset="10" data-wow-delay="2.4s") Загрузить еще
 							i.icon-angle-right-gray

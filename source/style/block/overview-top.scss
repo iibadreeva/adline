@@ -32,7 +32,7 @@
     padding-left: 7%;
 
     @include big() {
-      font-size: 90px;
+      font-size: 80px;
     }
 
     @include average() {
@@ -148,4 +148,44 @@
   }
 
 
+  &__wrap {
+    padding-left: 15%;
+    line-height: 1.4;
+
+
+    @include phones() {
+      font-size: 14px;
+    }
+
+    @include phones() {
+      padding-left: 0;
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+
+      @include phones() {
+        font-size: 18px;
+      }
+
+      @include phones() {
+        padding-left: 0;
+        font-size: 16px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 75px;
+
+      @include tablets(){
+        margin-bottom: 50px;
+      }
+
+      @include phones(){
+        margin-bottom: 25px;
+      }
+    }
+  }
 }

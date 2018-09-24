@@ -59,12 +59,15 @@
   &__item {
     text-decoration: none;
     margin-right: 32px;
+    flex: 1 1 auto;
+    overflow: hidden;
 
     @include tablets(){
       margin-right: 22px;
     }
 
     @include phones(){
+      margin-right: 0;
     }
   }
 
@@ -74,6 +77,10 @@
     //min-height: 218px;
     overflow: hidden;
     margin-bottom: 16px;
+
+    @include bigger(){
+      max-height: 363px;
+    }
 
     @include tablets() {
       max-height: 218px;
@@ -88,8 +95,12 @@
   }
 
   &__image {
-    max-width: 100%;
+    // max-width: 100%;
     min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
   }
 
   &__name {
@@ -107,5 +118,13 @@
     }
   }
 
+  &__sub-title {
+    margin-bottom: 3px;
+  }
 
+  &__date {
+    font-family: 'GothamPro-Medium';
+    color: $mainColor;
+    padding-right: 10px;
+  }
 }

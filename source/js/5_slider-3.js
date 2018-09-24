@@ -1,5 +1,5 @@
 //mini slider
-const sliderS = document.querySelector('.js-slider-two');
+const sliderS = document.querySelector('.js-slider');
 let isNextS = true;
 
 try{

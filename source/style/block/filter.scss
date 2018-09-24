@@ -1,7 +1,19 @@
 .filter {
+  &__title {
+    color: #d8d8d8;
+    font-family: 'GothamPro-Bold';
+    font-size: 35px;
+    margin-bottom: 57px;
+
+    @include tablets(){
+      font-size: 20px;
+    }
+  }
+
   &__items {
     font-family: "GothamPro-Medium";
     font-size: 0;
+    margin-bottom: 20px;
   }
 
   &__item {

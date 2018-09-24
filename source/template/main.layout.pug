@@ -33,12 +33,12 @@ include ./_mixins.pug
 			name: "about"
 		},{
 			title:"Пресс-центр",
-			url: "#",
+			url: "press-center.html",
 			name: "press"
 		},{
 			title:"Контакты",
-			url: "#",
-			name: "contact"
+			url: "project.html",
+			name: "project"
 		}]
 
 -var date = (new Date()).toLocaleDateString()
@@ -58,6 +58,7 @@ html(lang='ru')
 		link(rel="stylesheet", href="css/main.css")
 
 	body
+		.overlay
 		.conteiner
 			block content
 

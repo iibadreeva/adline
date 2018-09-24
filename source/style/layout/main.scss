@@ -34,7 +34,7 @@ p {
   margin: 0 0 15px 0;
 }
 .main {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
 }
 
@@ -49,12 +49,9 @@ p {
   max-width: 1280px;
   min-width: $minWidth;
 
-
-
-  @media screen and (min-width: 1920px) {
-    @include bigger() {
-      transform: scale(1.4) translateY(14%);
-    }
+  @include bigger() {
+    //max-width: 1580px;
+    transform: scale(1.487) translateY(16.4%);
   }
 
   @include phones(){
@@ -91,6 +88,17 @@ p {
   z-index: -1;
 }
 
+.overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 49;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
 .link-article {
   text-align: center;
 
@@ -114,6 +122,15 @@ p {
       @include phones(){
         top: -2px;
         left: 5px;
+      }
+    }
+
+    &--black {
+      color: $mainColor;
+
+      i {
+        top: -4px;
+        left: 9px;
       }
     }
 
@@ -153,5 +170,24 @@ p {
 
   @include tablets(){
     height: 2px;
+  }
+}
+
+.g-margin-right-225 {
+  margin-right: 225px;
+
+  @include average(){
+    margin-right: 50px;
+  }
+
+  @include phones(){
+    margin-right: 0;
+  }
+}
+.g-margin-bottom-85 {
+  margin-bottom: 85px;
+
+  @include phones(){
+    margin-bottom: 50px;
   }
 }

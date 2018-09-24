@@ -59,15 +59,22 @@
   &__item {
     text-decoration: none;
     margin-right: 30px;
-    flex: 1 1 auto;
+    flex: 1 1 348px;
+    overflow: hidden;
+
+    @include average(){
+      flex: 1 1 330px;
+    }
 
     @include tablets(){
       margin-right: 23px;
+      flex: 1 1 348px;
     }
 
     @include phones(){
       margin-right: 0;
       padding-bottom: 10px;
+      overflow: visible;
     }
 
     &--video {
@@ -133,12 +140,17 @@
 
     @include phones(){
       margin-bottom: 20px;
+      max-height: initial;
     }
   }
 
   &__image {
-    max-width: 100%;
+    // max-width: 100%;
     min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
   }
 
   &__name {

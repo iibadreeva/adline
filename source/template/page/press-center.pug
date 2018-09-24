@@ -1,0 +1,80 @@
+extends ../main.layout.pug
+include ../block/slider.pug
+include ../block/header.pug
+
+block title
+	title Наш дизайн
+
+block content
+	+popup()
+	+headers('design')
+
+	.content
+		article
+			.overview-top
+				.window__inner
+					.overview-top__title Пресс-центр
+					nav.overview-top__tab
+							li.overview-top__tab__list
+								a(href="#" class="overview-top__tab__link active") Новости
+							li.overview-top__tab__list
+								a(href="#" class="overview-top__tab__link") Пресс-релизы
+							li.overview-top__tab__list
+								a(href="#" class="overview-top__tab__link") Видео
+							li.overview-top__tab__list
+								a(href="#" class="overview-top__tab__link") СМИ о нас
+					.overview-top__wrap
+						.overview-top__wrap__title Благодарим Вас за внимание к деятельности компании «ЭДЛАЙН»!
+						.overview-top__wrap__text Если Вы заинтересованы в получении аналитических материалов или комментариев первых лиц ООО «Эдлайн», 
+							br
+							| обращайтесь к менеджеру по рекламе и PR:
+						ul.filter__items
+							li.filter__item.g-margin-right-225
+								a(href="#" class="filter__link") +7 (495) 681-36-06 доб. 5001
+							li.filter__item
+								a(href="#" class="filter__link") pub_man@adline.ru
+
+			.articlle-vertical.window__inner.g-margin-bottom-85
+					div(class="articlle-vertical__title")
+						span(class="wow fadeIn", data-wow-offset="50" data-wow-delay="0.5s") Наш дизайн
+						span(class="progress wow fadeInLeft" data-wow-offset="50" data-wow-duration="2s")
+					
+					.articlle-anonce__items
+						a(href="#", class="articlle-anonce__item wow fadeIn js-popup" data-wow-offset="50" data-wow-delay="1s")
+							span.articlle-anonce__image-wrap
+								img(src="image/6.jpg", class="articlle-anonce__image")
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 14.Х.2008
+							.articlle-anonce__name Журнал Московские торги 
+
+						a(href="#", class="articlle-anonce__item articlle-anonce__item--video wow fadeIn js-popup" data-wow-offset="50" data-wow-delay="1.5s")
+							span.articlle-anonce__image-wrap
+								img(src="image/16.jpg", class="articlle-anonce__image")
+								span.articlle-anonce__play
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 14.Х.2008
+							.articlle-anonce__name Круг света 2012, ТВЦ
+
+					.articlle-vertical__items
+						a(href="#", class="articlle-vertical__item wow fadeIn js-popup" data-wow-offset="100" data-wow-delay="0.5s")
+							span(class="articlle-vertical__image-wrap")
+								img(src="image/6.jpg", class="articlle-vertical__image")
+							.articlle-vertical__sub-title
+								span.articlle-vertical__date 14.Х.2008
+							.articlle-vertical__name Фигуры в центре Москвы к Новому году 2018
+						a(href="#", class="articlle-vertical__item wow fadeIn js-popup" data-wow-offset="100" data-wow-delay="1.0s")
+							span.articlle-vertical__image-wrap
+								img(src="image/6.jpg", class="articlle-vertical__image")
+							.articlle-vertical__sub-title
+								span.articlle-vertical__date 14.Х.2008
+							.articlle-vertical__name Правильное название объекта дизайна
+						a(href="#", class="articlle-vertical__item wow fadeIn js-popup" data-wow-offset="100" data-wow-delay="1.5s")
+							span.articlle-vertical__image-wrap
+								img(src="image/6.jpg", class="articlle-vertical__image")
+							.articlle-vertical__sub-title
+								span.articlle-vertical__date 14.Х.2008
+							.articlle-vertical__name Правильное название объекта дизайна
+					div.link-article
+						a(href="#", class="link-article__inner wow fadeIn js-popup" data-wow-offset="50" data-wow-delay="2.0s") Загрузить еще
+							i.icon-angle-right-gray
+				

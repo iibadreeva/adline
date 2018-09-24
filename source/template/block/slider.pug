@@ -1,46 +1,46 @@
 mixin sliderIndex(obj)
-	.fnc-slider.example-slider
-		.fnc-slider__slides
+	.fnc-slider.example-slider.fnc-sliders
+		.fnc-slider__slides.fnc-sliders__slides
 		each item in obj
 			if item.activeClass == true
-				.fnc-slide.m--active-slide
-					.fnc-slide__inner
-						.fnc-slide__image
-						.fnc-slide__bottom
-						.fnc-slide__content
-							.fnc-slide__heading-wrap
-								span.fnc-slide__heading-hidden
-									.fnc-slide__title= item.titleTop
+				.fnc-slide.fnc-slides.m--active-slide
+					.fnc-slide__inner.fnc-slides__inner
+						.fnc-slide__image.fnc-slides__image
+						.fnc-slide__bottom.fnc-slides__bottom
+						.fnc-slide__content.fnc-slides__content
+							.fnc-slide__heading-wrap.fnc-slides__heading-wrap
+								span.fnc-slide__heading-hidden.fnc-slides__heading-hidden
+									.fnc-slide__title.fnc-slides__title= item.titleTop
 									if item.titleBottom != false
-										.fnc-slide__title= item.titleBottom
-								h2.fnc-slide__heading
-									.fnc-slide__title= item.titleTop
+										.fnc-slide__title.fnc-slides__title= item.titleBottom
+								h2.fnc-slide__heading.fnc-slides__heading
+									.fnc-slide__title.fnc-slides__title= item.titleTop
 									if item.titleBottom != false
-										.fnc-slide__title= item.titleBottom
+										.fnc-slide__title.fnc-slides__title= item.titleBottom
 							div
-								.fnc-slide__text= item.textTop
-								.fnc-slide__text= item.textBottom
-							a(href="#", class="fnc-slide__btn") смотреть категорию
+								.fnc-slide__text.fnc-slides__text= item.textTop
+								.fnc-slide__text.fnc-slides__text= item.textBottom
+							a(href="#", class="fnc-slide__btn fnc-slides__btn") смотреть категорию
 								i.icon-angle-right-white
 			else
-				.fnc-slide
-					.fnc-slide__inner
-						.fnc-slide__image
-						.fnc-slide__bottom
-						.fnc-slide__content
-							.fnc-slide__heading-wrap
-								span.fnc-slide__heading-hidden
-									.fnc-slide__title= item.titleTop
+				.fnc-slide.fnc-slides
+					.fnc-slide__inner.fnc-slides__inner
+						.fnc-slide__image.fnc-slides__image
+						.fnc-slide__bottom.fnc-slides__bottom
+						.fnc-slide__content.fnc-slides__content
+							.fnc-slide__heading-wrap.fnc-slides__heading-wrap
+								span.fnc-slide__heading-hiddenspan.fnc-slides__heading-hidden
+									.fnc-slide__title.fnc-slides__title= item.titleTop
 									if item.titleBottom  != false
-										.fnc-slide__title= item.titleBottom
-								h2.fnc-slide__heading
-									.fnc-slide__title= item.titleTop
+										.fnc-slide__title.fnc-slides__title= item.titleBottom
+								h2.fnc-slide__heading.fnc-slides__heading
+									.fnc-slide__title.fnc-slides__title= item.titleTop
 										if item.titleBottom  != false
-											.fnc-slide__title= item.titleBottom
+											.fnc-slide__title.fnc-slides__title= item.titleBottom
 							div
-								.fnc-slide__text= item.textTop
-								.fnc-slide__text= item.textBottom
-							a(href="#", class="fnc-slide__btn") смотреть категорию
+								.fnc-slide__text.fnc-slides__text= item.textTop
+								.fnc-slide__text.fnc-slides__text= item.textBottom
+							a(href="#", class="fnc-slide__btn fnc-slides__btn") смотреть категорию
 								i.icon-angle-right-white
 
 		.fnc-nav
@@ -55,3 +55,27 @@ mixin sliderIndex(obj)
 					span.fnc-nav__control-progress
 				span.fnc-nav__control
 					span.fnc-nav__control-progress
+
+
+
+mixin sliderZoom(obj)
+	.slideshow
+		ul.slideshow__items
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/1.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2017
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/2.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2018
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/3.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2019

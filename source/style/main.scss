@@ -34,10 +34,11 @@ $progressColor: $mainColor;
 $progressColorGrey: #f6f6f6;
 $minWidth: 768px;
 
+@import "block/**/*.scss";
+
 @import "layout/fonts";
 @import "layout/main";
 @import "layout/animate";
 
-@import "block/**/*.scss";
 
 @import "layout/icon";
