@@ -48,7 +48,10 @@ mixin sliderIndex(obj)
 				.fnc-nav__bg.m--active-nav-bg
 				.fnc-nav__bg
 				.fnc-nav__bg
+				.fnc-nav__bg
 			.fnc-nav__controls
+				span.fnc-nav__control
+					span.fnc-nav__control-progress
 				span.fnc-nav__control
 					span.fnc-nav__control-progress
 				span.fnc-nav__control
@@ -59,7 +62,30 @@ mixin sliderIndex(obj)
 
 
 mixin sliderZoom(obj)
-	.slideshow
+	.slideshow.js-slideshow
+		ul.slideshow__items
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/1.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2017
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/2.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2018
+			li.slideshow-item.slideshow__item
+				span(style="background-image: url(image/assets/3.jpg" class="slideshow__image")
+				span.slideshow__bottom
+				span.slideshow__text Оформление Москвы
+					br
+					| ко дню города 2019
+
+
+mixin sliderZoomPopup(obj)
+	.slideshow.js-slideshow-popup.slideshow--popup
 		ul.slideshow__items
 			li.slideshow-item.slideshow__item
 				span(style="background-image: url(image/assets/1.jpg" class="slideshow__image")

@@ -26,6 +26,9 @@
         margin-top: 23px;
       }
     }
+    @include bigger(){
+      font-size: 3vh;
+    }
 
     @include tablets(){
       font-size: 12px;
@@ -64,7 +67,12 @@
     text-decoration: none;
     width: 50%;
     display: inline-block;
-    vertical-align: top;    
+    vertical-align: top;
+
+    //@include bigger(){
+    //  height: 25vh;
+    //  max-height: 250px;
+    //}
 
     @include phones() {
       width: 100%;
@@ -115,6 +123,13 @@
     margin-bottom: 10px;
     background-size: cover;
     background-position: 50% 50%;
+    position: relative;
+
+    @include bigger(){
+      height: 50vh;
+      max-height: 500px;
+      min-height: 393px;
+    }
 
     @include big() {
       height: 387px;
@@ -129,6 +144,23 @@
       height: 297px;
       margin-bottom: 20px;
     }
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all .9s ease;
+      background: rgba(#fff,0);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(#fff,0.4);
+      }
+    }
     
   }
 
@@ -140,7 +172,13 @@
     margin-bottom: 10px;
     background-size: cover;
     background-position: 50% 50%;
+    position: relative;
 
+    @include bigger(){
+      height: 21vh;
+      max-height: 200px;
+      min-height: 160px;
+    }
 
     @include tablets() {
       height: 96px;
@@ -149,6 +187,23 @@
     @include phones() {
       height: 297px;
       margin-bottom: 20px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all .9s ease;
+      background: rgba(#fff,0);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(#fff,0.4);
+      }
     }
   }
 
@@ -171,6 +226,10 @@
     line-height: 1.4;
     text-align: left;
 
+    @include bigger(){
+      font-size: 2vh;
+    }
+
     @include big(){
       font-size: 14px;
       height: 57px;
@@ -188,6 +247,10 @@
 
     &--small {
       font-size: $mainFont - 1;
+
+      @include bigger(){
+        font-size: 2vh;
+      }
 
       @include big(){
         font-size: 13px;

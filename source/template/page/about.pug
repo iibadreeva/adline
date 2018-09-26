@@ -3,12 +3,13 @@ include ../block/slider.pug
 include ../block/header.pug
 
 block title
-	title Наш дизайн
+	title О компании
 
-block content	
+block content
 	+headers('about')
+	+popup()
 
-	main.main
+	main
 		.content
 			article
 				.overview-top
@@ -20,9 +21,9 @@ block content
 					.stick__left
 						.stick__left__inner.js-slick
 							.simple-slider-two
-								.simple-slider-two__wrap.js-slider
+								.simple-slider-two__wrap.js-sliders
 									.simple-slider-two__list
-										span.simple-slider-two__inner
+										a(href="image/simple-slide-1-big.jpg" class="simple-slider-two__inner")
 											img(src="image/simple-slide-1.jpg" class="simple-slider-two__image")
 											span(href="#", class="simple-slider-two__link js-slider-link-left")
 												i.icon-chevron-left
@@ -30,7 +31,7 @@ block content
 												i.icon-chevron-right
 										.simple-slider-two__title Благодарственное письмо за участие в подготовке московской области к празднованию 70-летию победы в Великой отечественной войне
 									.simple-slider-two__list
-										span.simple-slider-two__inner
+										a(href="image/simple-slide-2-big.jpg" class="simple-slider-two__inner")
 											img(src="image/simple-slide-2.jpg" class="simple-slider-two__image")
 											span(href="#", class="simple-slider-two__link js-slider-link-left")
 												i.icon-chevron-left
@@ -38,7 +39,7 @@ block content
 												i.icon-chevron-right
 										.simple-slider-two__title Российский национальный приз в области дизайна «Виктория»
 									.simple-slider-two__list
-										span.simple-slider-two__inner
+										a(href="image/simple-slide-3-big.jpg" class="simple-slider-two__inner")
 											img(src="image/simple-slide-3.jpg" class="simple-slider-two__image")
 											span(href="#", class="simple-slider-two__link js-slider-link-left")
 												i.icon-chevron-left
@@ -55,5 +56,5 @@ block content
 
 
 						div.link-article
-							a(href="#", class="link-article__inner") Загрузить еще
+							a(href="/projects.html", class="link-article__inner") Смотреть проекты
 								i.icon-angle-right-gray

@@ -24,6 +24,10 @@
       }
     }
 
+    @include bigger(){
+      font-size: 3vh;
+    }
+
     @include tablets(){
       font-size: 12px;
       margin-bottom: 32px;
@@ -49,6 +53,7 @@
     @include phones(){
       flex-direction: column;
       margin-bottom: 7px;
+      width: 100%;
     }
 
     &--bottom {
@@ -77,9 +82,12 @@
     //min-height: 218px;
     overflow: hidden;
     margin-bottom: 16px;
+    position: relative;
 
     @include bigger(){
-      max-height: 363px;
+      height: 50vh;
+      max-height: 400px;
+      min-height: 363x;
     }
 
     @include tablets() {
@@ -92,6 +100,24 @@
       min-height: 302px;
       margin-bottom: 18px;
     }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all .9s ease;
+      background: rgba(#fff,0);
+    }
+
+    &:hover {
+      &:after {
+        background: rgba(#fff,0.4);
+      }
+    }
   }
 
   &__image {
@@ -101,12 +127,24 @@
     transform: translateX(-50%);
     left: 50%;
     position: relative;
+
+    @include bigger(){
+      max-height: 50vh;
+    }
+
+    @include phones(){
+      width: 100%;
+    }
   }
 
   &__name {
     width: 70%;
     color: $mainColor;
     line-height: 1.4;
+
+    @include bigger(){
+      font-size: 2vh;
+    }
 
     @include tablets(){
       font-size: 9px;

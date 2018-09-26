@@ -13,6 +13,12 @@
     flex-direction: column;
   }
 
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   &__title {
     font-family: "GothamPro-Bold";
     font-size: 35px;
@@ -20,6 +26,9 @@
     position: relative;
     top: -4px;
     left: -3px;
+    @include bigger(){
+      font-size: 2.5vw;
+    }
 
     @include tablets(){
       margin-bottom: 22px;
@@ -37,6 +46,10 @@
     margin-bottom: 30px;
     width: 50%;
     line-height: 1.5;
+
+    @include bigger(){
+      font-size: 1.3vw;
+    }
 
     @include tablets(){
       font-size: 12px;
@@ -108,19 +121,28 @@
 
   &__right {
     float: right;
-    margin-right: 65px;
+     width: 340px;
+    //width: 420px;
+    // margin-right: 65px;
     text-align: center;
+
+    @include bigger(){
+      transform: scale(1.2) translateY(8.4%);
+    }
 
     @include average(){
       margin-right: 0;
     }
 
-    @include tablets(){
-      margin-right: 35px;
+    @include big(){
+      margin-right: 0px;
+      //width: 300px;
     }
 
     @include phones(){
       float: none;
+      margin-bottom: 0;
+      width: 100%;
       margin: 0 0 42px 0;
       order: 2;
     }
@@ -129,6 +151,14 @@
 
   &__author {
     width: 60%;
+
+    @include big(){
+      width: 80%;
+      clear: both;
+    }
+    @include tablets(){
+      clear: inherit;
+    }
 
     @include phones(){
       order: 3;
@@ -165,6 +195,10 @@
         margin-bottom: 15px;
         line-height: 1.2;
 
+        @include bigger(){
+          font-size: 1vw;
+        }
+
         @include tablets(){
           font-size: 8px;
           margin-bottom: 11px;
@@ -195,6 +229,10 @@
         @include phones(){
           margin-top: 22px;
         }
+      }
+
+      @include bigger(){
+        font-size: 1.3vw;
       }
 
       @include average(){

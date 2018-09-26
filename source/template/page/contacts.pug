@@ -1,0 +1,16 @@
+extends ../main.layout.pug
+include ../block/slider.pug
+include ../block/header.pug
+
+block title
+	title Пресс-центр
+
+block content
+	+popup()
+	+headers('contacts')
+
+	.content
+		article
+			.overview-top
+				.window__inner
+					.overview-top__title Контакты

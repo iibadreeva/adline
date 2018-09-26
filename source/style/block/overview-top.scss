@@ -5,6 +5,10 @@
   padding: 58px 0 10px;
   position: relative;
 
+  @include bigger(){
+    font-size: 1vw;
+  }
+
   @include phones() {
     padding-top: 73px;
   }
@@ -30,6 +34,10 @@
     color: #d8d8d8;
     margin-bottom: 64px;
     padding-left: 7%;
+
+    @include bigger(){
+      font-size: 7vw;
+    }
 
     @include big() {
       font-size: 80px;
@@ -64,6 +72,7 @@
     @include phones() {
       padding-left: 0;
       font-size: 16px;
+      margin-bottom: 20px;
     }
   }
 

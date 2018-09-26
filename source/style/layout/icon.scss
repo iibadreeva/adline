@@ -6,6 +6,15 @@
   display: inline-block;
   transform: rotate(-90deg);
 
+  @include tablets(){
+    width: 8px;
+    height: 4px;
+  }
+  @include phones() {
+    width: 10px;
+    height: 7px;
+  }
+
   &:after,
   &:before{
     content: "";

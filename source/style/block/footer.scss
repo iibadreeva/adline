@@ -16,6 +16,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include bigger(){
+      font-size: 1vw;
+    }
+
     @include tablets(){
       padding: 21px 0 12px 0;
     }
@@ -127,6 +131,11 @@
     background: $footerBg;
     color: #fff;
     padding: 23px 0 30px;
+
+    @include bigger(){
+      font-size: 1vw;
+      padding: 2% 0 30px;
+    }
 
     @include tablets(){
       padding: 16px 0 25px;

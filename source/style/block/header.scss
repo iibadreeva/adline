@@ -27,8 +27,14 @@
   &__logo {
     width: 159px;
     height: 43px;
-    background: url("../image/logo.png") no-repeat;
+    background: url("../image/logo.svg") no-repeat;
     background-size: contain;
+
+    @include bigger(){
+      width: 14vw;
+      height: 6vh;
+      min-height: 43px;
+    }
 
     @include tablets() {
       width: 95px;
@@ -72,6 +78,10 @@
       color: $mainColor;
       font-size: 15px;
 
+      @include bigger(){
+        font-size: 1vw;
+      }
+
       @include big() {
         font-size: 14px;
       }
@@ -109,6 +119,10 @@
   &__language {
     margin-left: 35px;
     text-transform: uppercase;
+
+    @include bigger(){
+      font-size: 1vw;
+    }
 
     @include big(){
       margin-left: 2vw;

@@ -7,8 +7,8 @@ include ./_mixins.pug
 		textTop: 'Палитра хорошего',
 		textBottom: 'настроения городской жизни'
 	},{
-		titleTop: 'наш',
-		titleBottom: 'дизайн',
+		titleTop: 'Свет и',
+		titleBottom: 'технологии',
 		textTop: 'Палитра хорошего',
 		textBottom: 'настроения городской жизни2'
 	},{
@@ -16,6 +16,11 @@ include ./_mixins.pug
 		titleBottom: false,
 		textTop: 'Палитра хорошего',
 		textBottom: 'настроения городской жизни3'
+	},{
+		titleTop: 'наш',
+		titleBottom: 'дизайн',
+		textTop: 'Палитра хорошего',
+		textBottom: 'настроения городской жизни4'
 	}]
 
 -
@@ -37,8 +42,8 @@ include ./_mixins.pug
 			name: "press"
 		},{
 			title:"Контакты",
-			url: "project.html",
-			name: "project"
+			url: "contacts.html",
+			name: "contacts"
 		}]
 
 -var date = (new Date()).toLocaleDateString()
@@ -52,7 +57,7 @@ html(lang='ru')
 		meta(charset='utf-8')
 		block title
 			title Главная страница
-		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		link(rel="shorcat icon", href="favicon.ico", type="image/x-icon")
 		link(rel="stylesheet", href="css/main.css")

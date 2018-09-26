@@ -1,11 +1,23 @@
 $heightSlider: 594px;
 $heightSliderT: 663px;
 $heightSliderM: 450px;
+$heightSliderB: 80vh;
 .fnc-sliders {
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  height: 594px;
+  height: $heightSlider;
+
+  @include bigger(){
+    //max-height: 630px;
+    min-height: $heightSlider;
+    max-height: 750px;
+    height: $heightSliderB;
+  }
+
+  @include tablets(){
+    height: $heightSliderT;
+  }
 
   @include phones(){
     height: $heightSliderM;
@@ -35,6 +47,17 @@ $heightSliderM: 450px;
   width: 100%;
   transform: translate3d(0, 0, 0);
 
+  @include bigger(){
+    //max-height: 630px;
+    min-height: $heightSlider;
+    max-height: 750px;
+    height: $heightSliderB;
+  }
+
+  @include tablets(){
+    height: $heightSliderT;
+  }
+
   @include phones(){
     height: $heightSliderM;
   }
@@ -47,6 +70,7 @@ $heightSliderM: 450px;
   }
 
   &__inner {
+    display: none;
     position: relative;
     height: 100%;
   }
@@ -58,6 +82,11 @@ $heightSliderM: 450px;
     height: 100%;
     min-height: 862px;
     background-size: auto 862px;
+
+    @include bigger(){
+      min-height: 1062px;
+      background-size: 100vw auto;
+    }
     @include phones() {
       height: 718px;
     }
@@ -78,17 +107,22 @@ $heightSliderM: 450px;
   }
 
   &__content {
+    //display: none;
     z-index: 2;
     position: absolute;
     left: 85px;
     bottom: 40px;
+
+    @include tablets(){
+      bottom: 50px;
+      left: 35px;
+    }
 
     @include phones() {
       left: 5%;
       right: 5%;
       text-align: center;
       bottom: 30px;
-
       text-align: center;
       bottom: 30px;
       display: flex;
@@ -119,7 +153,7 @@ $heightSliderM: 450px;
   }
 
   &__heading {
-    display: none;
+    //display: none;
     text-transform: inherit;
     background-position: -80px -105px;
     background-repeat: no-repeat;
@@ -136,6 +170,10 @@ $heightSliderM: 450px;
     -ms-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     text-fill-color: transparent;
+
+    @include bigger(){
+      background-size: 100vw 862px;
+    }
 
     @include phones() {
       margin-bottom: 115px;
@@ -162,6 +200,10 @@ $heightSliderM: 450px;
     line-height: 1.2;
     white-space: nowrap;
 
+    @include bigger(){
+      font-size: 8vw;
+    }
+
     @include phones() {
       font-size: 66px;
       text-align: left;
@@ -179,6 +221,10 @@ $heightSliderM: 450px;
     word-spacing: 10px;
     font-family: 'GothamPro-Bold';
     line-height: 1.2;
+
+    @include bigger(){
+      font-size: 2vw;
+    }
 
     @include phones() {
       font-size: 18px;
@@ -207,9 +253,17 @@ $heightSliderM: 450px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 40px;
+
+    @include tablets(){
+      font-size: 9px;
+      margin-top: 70px;
+      padding: 12px 43px;
+    }
 
     @include phones() {
       font-size: 10px;
+      margin-top: 0px;
       padding: 14px 50px;
       order: 4;
       margin: 0 22px;
@@ -247,12 +301,30 @@ $heightSliderM: 450px;
 }
 .m--active-slide .fnc-slide__image {
   animation: bg 7s linear infinite;
+
+  @include bigger(){
+    animation: bgB 7s linear infinite;
+  }
+
+  @include tablets(){
+    animation: bgT 7s linear infinite;
+  }
+
+  @include phones(){
+    animation: bg 7s linear infinite;
+  }
 }
 .m--active-slide .fnc-slide__heading {
   animation: bg2 7s linear infinite;
   display: block;
 }
+.m--active-slide .fnc-slides__inner {
+  display: block;
 
+  //@include phones(){
+  //  display: flex;
+  //}
+}
 .credits-active .example-slider {
   transform: translate3d(-400px, 0, 0) rotateY(10deg) scale(0.9);
 }
@@ -273,6 +345,12 @@ $heightSliderM: 450px;
 }
 .example-slider .fnc-slide-3 .fnc-slide__heading {
   background-image: url("../image/assets/3-3.png");
+}
+.example-slider .fnc-slide-4 .fnc-slide__image {
+  background-image: url("../image/assets/4.jpg?1");
+}
+.example-slider .fnc-slide-4 .fnc-slide__heading {
+  background-image: url("../image/assets/4-4.jpg?1");
 }
 .example-slider .fnc-slide__heading,
 .example-slider .fnc-slide__action-btn,
@@ -328,6 +406,10 @@ $heightSliderM: 450px;
     align-items: flex-end;
     padding: 0 85px 38px 0;
 
+    @include tablets(){
+      padding-right: 65px;
+    }
+
     @include phones() {
       justify-content: center;
       padding: 0 0 12px;
@@ -348,6 +430,17 @@ $heightSliderM: 450px;
 
     &.m--active-control {
       background: white;
+    }
+
+    @include bigger(){
+      width: 15px;
+      height: 15px;
+    }
+
+    @include tablets(){
+      width: 15px;
+      height: 15px;
+      margin-left: 32px;
     }
 
     @include phones() {
@@ -399,6 +492,24 @@ $heightSliderM: 450px;
 @keyframes bg {
   from {
     transform: translateY(-244px);//274
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes bgT {
+  from {
+    transform: translateY(-155px);//274
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes bgB {
+  from {
+    transform: translateY(-255px);//274
   }
 
   to {

@@ -50,8 +50,8 @@ p {
   min-width: $minWidth;
 
   @include bigger() {
-    //max-width: 1580px;
-    transform: scale(1.487) translateY(16.4%);
+    max-width: 100%;
+    //transform: scale(1.487) translateY(16.4%);
   }
 
   @include phones(){
@@ -65,6 +65,10 @@ p {
 
   @include tablets(){
     padding: 0 51px;
+  }
+
+  @include phones(){
+    padding: 0 24px;
   }
 }
 
@@ -146,6 +150,10 @@ p {
       &:after {
         background: transparent;
       }
+    }
+
+    @include bigger(){
+      font-size: 1.5vw;
     }
 
     @include tablets(){
