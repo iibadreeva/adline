@@ -1,0 +1,335 @@
+ //$height: 320px;
+ //$heightTablets: 188px;
+ //$heightMobile: 320px;
+ //
+ //.simple-slider {
+ //  position: relative;
+ //  width: 221px;
+ //  margin-bottom: 55px;
+ //  height: $height;
+ //  text-align: left;
+ //  cursor: pointer;
+ //
+ //  @include tablets(){
+ //    width: 135px;
+ //    height: $heightTablets;
+ //    margin-bottom: 33px;
+ //  }
+ //
+ //  @include phones(){
+ //    margin: 0 auto 38px;
+ //    // width: 100%;
+ //    width: calc(100% - 50px);
+ //    padding: 0 25px;
+ //    height: $heightMobile;
+ //  }
+ //
+ //  &__wrap {
+ //    position: absolute;
+ //    top: 0px;
+ //    left: 0px;
+ //    z-index: 1;
+ //    width: 100%;
+ //    height: $height;
+ //    overflow: hidden;
+ //
+ //    @include tablets(){
+ //      height: $heightTablets;
+ //    }
+ //
+ //    @include phones(){
+ //      height: $heightMobile;
+ //    }
+ //  }
+ //
+ //  &__zoom {
+ //    width: 23px;
+ //    height: 23px;
+ //    background: url('../image/zoom.svg');
+ //    position: absolute;
+ //    top: 50%;
+ //    left: 50%;
+ //    transform: translate(-50%);
+ //    z-index: 2;
+ //  }
+ //
+ //  &__img {
+ //
+ //    @include tablets(){
+ //      width: 64px;
+ //    }
+ //
+ //    @include phones(){
+ //      width: 107px;
+ //    }
+ //
+ //  }
+ //
+ //  &__image {
+ //    width: 100%;
+ //    height: 100%;
+ //    background-repeat: no-repeat;
+ //    background-size: cover;
+ //    background-position: center center;
+ //    display: flex;
+ //    align-items: flex-end;
+ //    padding: 14px 10px;
+ //
+ //    &:before {
+ //      content: "";
+ //      display: block;
+ //      position: absolute;
+ //      top: 0;
+ //      left: 0;
+ //      height: $height;
+ //      width: 100%;
+ //      background: linear-gradient(45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+ //      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+ //
+ //      @include tablets(){
+ //        height: $heightTablets;
+ //      }
+ //
+ //      @include phones(){
+ //        height: $heightMobile;
+ //      }
+ //    }
+ //  }
+ //
+ //  &__title {
+ //    color: #fff;
+ //    position: relative;
+ //    line-height: 1.3;
+ //
+ //    @include tablets(){
+ //      font-size: 9px;
+ //    }
+ //
+ //    @include phones(){
+ //      font-size: 15px;
+ //    }
+ //  }
+ //
+ //  &__link {
+ //    position: absolute;
+ //    top: 50%;
+ //    transform: translateY(-50%);
+ //    left: -32px;
+ //    z-index: 7;
+ //    color: #FFF;
+ //    transition: all .9s ease;
+ //    text-decoration: none;
+ //    width: 0;
+ //    height: 0;
+ //    border-top: 7px solid transparent;
+ //    border-right: 10px solid $mainColor;
+ //    border-bottom: 7px solid transparent;
+ //
+ //    &:last-child {
+ //      left: auto;
+ //      right: -32px;
+ //      border-right: none;
+ //      border-left: 10px solid $mainColor;
+ //
+ //      @include tablets(){
+ //        right: -19px;
+ //        border-left: 6px solid $mainColor;
+ //      }
+ //
+ //      @include phones(){
+ //        right: -7px;
+ //        border-left: 10px solid $mainColor;
+ //      }
+ //    }
+ //
+ //    @include tablets(){
+ //      border-top: 4px solid transparent;
+ //      border-right: 6px solid $mainColor;
+ //      border-bottom: 4px solid transparent;
+ //      left: -24px;
+ //    }
+ //
+ //    @include phones(){
+ //      border-top: 7px solid transparent;
+ //      border-right: 10px solid $mainColor;
+ //      border-bottom: 7px solid transparent;
+ //      left: -14px;
+ //    }
+ //  }
+ //
+ //  &:hover {
+ //    .slider__link {
+ //      background-color: rgba(0,0,0,0.3);
+ //    }
+ //  }
+ //}
+ //$height: 320px;
+ //$heightTablets: 188px;
+ //$heightMobile: 320px;
+
+$height: 320px;
+$heightTablets: 188px;
+$heightMobile: 320px;
+
+.simple-slider {
+  position: relative;
+  text-align: center;
+
+  @include tablets(){
+    width: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    display: inline-block;
+    //display: none;
+    margin-bottom: 25px;
+  }
+
+  &__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $height;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+    height: 100%;
+
+    @include tablets(){
+      max-height: $heightTablets;
+    }
+    @include phones(){
+      max-height: $heightMobile;
+    }
+  }
+
+  &__img {
+    width: 107px;
+
+    @include bigger(){
+      width: 30%;
+    }
+
+    @include tablets(){
+      width: 64px;
+    }
+
+    @include phones(){
+      width: 107px;
+    }
+
+  }
+
+  &__wrap {
+    height: $height;
+    overflow: hidden;
+    margin: 0 auto 55px;
+
+    @include bigger(){
+      height: $height - 1;
+    }
+
+    @include tablets(){
+      max-height: $heightTablets;
+    }
+    @include phones(){
+      max-height: $heightMobile;
+    }
+  }
+
+  &__list {
+    background: #fff;
+    right: 0;
+    height: $height;
+
+    @include tablets(){
+      max-height: $heightTablets;
+    }
+    @include phones(){
+      max-height: $heightMobile;
+    }
+  }
+
+  &__image {
+    margin: auto;
+    max-width: 221px;
+
+    //@include big(){
+    //  max-height: $heightMobile;
+    //  max-width: 242px;
+    //}
+
+    @include tablets(){
+      max-height: $heightTablets;
+    }
+    @include phones(){
+      max-height: $heightMobile;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    bottom: 18px;
+    text-align: left;
+    left: 18px;
+
+    @include tablets(){
+      font-size: 9px;
+    }
+
+    @include phones(){
+      font-size: 15px;
+    }
+    // font-family: 'GothamPro-Medium';
+    // position: relative;
+    // line-height: 1.3;
+    // text-transform: uppercase;
+
+    // @include tablets(){
+    //   font-size: 10px;
+    // }
+
+    // @include phones(){
+    //   font-size: 12px;
+    // }
+  }
+
+  &__link {
+    // display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    z-index: 7;
+    color: #FFF;
+    transition: all .9s ease;
+    text-decoration: none;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 10px solid $mainColor;
+    border-bottom: 7px solid transparent;
+    cursor: pointer;
+
+    &.js-slider-link-right {
+      left: auto;
+      right: -30px;
+      border-right: none;
+      border-left: 10px solid $mainColor;;
+    }
+  }
+
+  // &:hover {
+  //   .simple-slide__link {
+  //     display: block;
+  //   }
+
+  //   .simple-slider__inner:before {
+  //     opacity:1;
+  //   }
+  // }
+}

@@ -1,0 +1,83 @@
+extends ../main.layout.pug
+include ../block/slider.pug
+include ../block/header.pug
+
+block title
+	title Все проекты
+
+block content	
+	+headers('project')
+
+	main
+		.content
+			+sliderZoom(sliderJson)
+			
+			article
+				.window__inner
+					.overview-project
+						.overview-project__title
+							span.overview-project__title__inner
+								span.icon-angle-left-black
+								span.overview-project__title__wrap Все проекты
+						.overview-project__content
+							p Рыба текста про проект, примерно такая как в протопите. Основополагающий принцип работы «Эдлайн» – индивидуальный, комплексный поход крешению каждой задачи. Универсальный штат опытных сотрудников позволяет компанииработать с проектами по каждому из направлений: концепция, проект, реализация, эксплуатация.
+							p Поход крешению каждой задачи. Универсальный штат опытных сотрудников позволяет компанииработать с проектами по каждому из направлений: концепция, проект, реализация, эксплуатация.
+
+
+					.filter
+						.filter__title Участие в проекте:
+						ul.filter__items
+							li.filter__item
+								a(href="#" class="filter__link") Разработка концепции
+							li.filter__item
+								a(href="#" class="filter__link") Дизайн-проект
+							li.filter__item
+								a(href="#" class="filter__link") Проектирование
+							li.filter__item
+								a(href="#" class="filter__link") Подбор оборудования
+							li.filter__item
+								a(href="#" class="filter__link") Строительство
+							li.filter__item
+								a(href="#" class="filter__link") Монтаж оборудования
+							li.filter__item
+								a(href="#" class="filter__link") Пуско-наладочные работы
+							li.filter__item
+								a(href="#" class="filter__link") Гарантийное обслуживание
+							li.filter__item
+								a(href="#" class="filter__link") Организация мероприятий
+							li.filter__item
+								a(href="#" class="filter__link") Творческая концепция
+							li.filter__item
+								a(href="#" class="filter__link") Художественное сопровождение
+
+
+				.articlle-realty.window__inner.g-margin-bottom-85
+					div(class="articlle-realty__title")
+						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Еще проекты
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
+
+					.articlle-realty__items.articlle-realty__items--last
+						a(href="#", class="articlle-realty__item-big wow fadeIn" data-wow-offset="100" data-wow-delay="0.7s")
+							span.articlle-realty__inner
+								span(class="articlle-realty__image-big-wrap" style="background-image: url(../image/6.jpg);")
+								.articlle-realty__name Фонтан на Крымской набережной 
+									br
+									| в парке Музеон
+						.articlle-realty__wrap
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/7.jpg);")
+									.articlle-realty__name Светомузыкальный фонтан в Царицыно
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.2s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/8.jpg);")
+									.articlle-realty__name ММФС «Круг света»
+							a(href="#", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.4s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(../image/9.jpg);")
+									.articlle-realty__name.articlle-realty__name--small Праздничное оформление города Москвы к Новому Году 2013-2015 г.
+									
+					div.link-article
+						a(href="#", class="link-article__inner wow fadeIn" data-wow-offset="10" data-wow-delay="2.4s") Загрузить еще
+							i.icon-angle-right-gray
+				

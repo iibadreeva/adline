@@ -1,0 +1,254 @@
+.main-feed {
+  padding-top: 99px;  
+  padding-bottom: 99px;
+
+  @include tablets(){
+    padding-top: 62px;
+    padding-bottom: 59px;
+  }
+
+  @include phones(){
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__title {
+    font-family: "GothamPro-Bold";
+    font-size: 35px;
+    margin-bottom: 40px;
+    position: relative;
+    top: -4px;
+    left: -3px;
+    @include bigger(){
+      font-size: 2.5vw;
+    }
+
+    @include tablets(){
+      margin-bottom: 22px;
+      font-size: 21px;
+    }
+
+    @include phones(){
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-family: "GothamPro-Medium";
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+    line-height: 1.5;
+
+    @include bigger(){
+      font-size: 1.3vw;
+    }
+
+    @include tablets(){
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    @include phones(){
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .link-article__inner {
+    margin-bottom: 95px;
+
+    @include average(){
+      margin-bottom: 58px;
+    }
+
+    @include tablets(){
+      margin-bottom: 43px;
+    }
+    @include phones(){
+      margin-bottom: 33px;
+    }
+  }
+
+  &__link {
+    color: #606060;
+    font-family: "GothamPro-Medium";
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 95px;
+    font-size: 20px;
+
+    .link-article__inner {
+      @include phones() {
+        font-size: 16px;
+      }
+    }
+
+    i {
+      position: relative;
+      top: -2px;
+      left: 5px;
+    }
+
+    &:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      background: #afafaf;
+      height: 1px;
+    }
+
+    &:hover {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+
+  &__info {
+    @include phones(){
+      order: 1;
+    }
+  }
+
+  &__right {
+    float: right;
+     width: 340px;
+    //width: 420px;
+    // margin-right: 65px;
+    text-align: center;
+
+    @include bigger(){
+      transform: scale(1.1) translateY(0.1%);
+    }
+
+    @include average(){
+      margin-right: 0;
+    }
+
+    @include big(){
+      margin-right: 0px;
+      //width: 300px;
+    }
+
+    @include phones(){
+      float: none;
+      margin-bottom: 0;
+      width: 100%;
+      margin: 0 0 42px 0;
+      order: 2;
+    }
+  }
+
+
+  &__author {
+    width: 60%;
+
+    @include big(){
+      width: 80%;
+      clear: both;
+    }
+    @include tablets(){
+      clear: inherit;
+    }
+
+    @include phones(){
+      order: 3;
+      width: 100%;
+    }
+
+    &__image {
+      float: left;
+      margin-right: 24px;
+      border-radius: 50%;
+      position: relative;
+      left: -4px;
+      top: 5px;
+
+      @include average(){
+        width: 135px;
+      }
+      @include tablets(){
+        width: 103px;
+        margin-right: 11px;
+        position: relative;
+        top: 14px;
+      }
+      @include phones(){
+        width: 130px;
+        margin-right: 27px;
+      }
+    }
+
+    &__content {
+      overflow: hidden;
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.2;
+
+        @include bigger(){
+          font-size: 1vw;
+        }
+
+        @include tablets(){
+          font-size: 8px;
+          margin-bottom: 11px;
+        }
+
+        @include phones(){
+          font-size: 12px;
+          line-height: 1.3;
+          margin-bottom: 14px;
+        }
+      }
+    }
+
+    &__title {
+      display: inline-block;
+      font-family: "GothamPro-Medium";
+      font-size: 20px;
+      margin-bottom: 30px;
+
+      .progress {
+        margin-top: 14px;
+
+        @include tablets(){
+          margin-top: 10px;
+          // margin-bottom: 17px;
+        }
+
+        @include phones(){
+          margin-top: 22px;
+        }
+      }
+
+      @include bigger(){
+        font-size: 1.3vw;
+      }
+
+      @include average(){
+        font-size: 12px;
+      }
+
+      @include tablets(){
+        margin-top: 12px;
+        margin-bottom: 17px;
+      }
+
+      @include phones(){
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.stick {
+  display: flex;
+  flex-direction: row;
+
+  @include tablets(){
+    flex-direction: column;
+  }
+
+  .is_stuck {
+    @include tablets(){
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .link-article {
+    padding-top: 48px;
+
+    @include phones(){
+      padding-top: 20px;
+    }
+  }
+
+  &__left {
+    margin-right: 33px;
+
+    @include phones(){
+      margin-right: 0;
+    }
+
+    &__inner {
+      margin: auto;
+      overflow: hidden;
+      width: 369px;
+
+      @include bigger(){
+        width: 469px;
+      }
+
+      @include phones(){
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    margin-bottom: 75px;
+    @include phones(){
+      margin-bottom: 40px;
+    }
+    p {
+      margin-bottom: 22px;
+      line-height: 1.4;
+      text-indent: 35px;
+
+      @include bigger(){
+        font-size: 1vw;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

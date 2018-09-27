@@ -1,0 +1,175 @@
+extends ../main.layout.pug
+include ../block/slider.pug
+include ../block/header.pug
+
+block title
+	title Главная станица
+
+block content
+	+headers('/')
+	+popup()
+
+	main
+		.content
+			+sliderIndex(sliderJson)
+
+			article.window__inner
+				.main-feed
+					section(class="main-feed__right wow fadeIn", data-wow-offset="100" data-wow-delay="0.8s")
+						//- .simple-slider
+						//- 	.simple-slider__wrap.js-slider.js-popup
+						//- 		.simple-slider__image(style="background-image: url(image/simple-slide-1.jpg")
+						//- 			.simple-slider__title Российский национальный приз в области дизайна «Виктория»
+						//- 		.simple-slider__image(style="background-image: url('http://www.mironova-design.ru/I/awards/avard_.jpg")
+						//- 			.simple-slider__title Российский национальный приз в области дизайна2
+						//- 		.simple-slider__image(style="background-image: url('https://www.bl-g.ru/about/diplomas/nagrady_russian_design_2011.JPG")
+						//- 			.simple-slider__title Российский национальный приз в области дизайна 3
+						//- 	.simple-slider__zoom
+						//- 	a(href="#", class="simple-slider__link js-slider-link-left")
+						//- 		i.icon-chevron-left
+						//- 	a(href="#", class="simple-slider__link js-slider-link-right")
+						//- 		i.icon-chevron-right
+						//- img.simple-slider__img(src="image/main-feed-text.png")
+						.simple-slider
+							.simple-slider__wrap.js-slider.mfp-with-fade
+								.simple-slider__list
+									span.simple-slider__inner
+										a(href="image/simple-slide-1-big.jpg" class="simple-slider__bg")
+										img(src="image/simple-slide-1.jpg" class="simple-slider__image")
+										span(href="#", class="simple-slider__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider__link js-slider-link-right")
+											i.icon-chevron-right
+										.simple-slider__title Российский национальный приз в области дизайна «Виктория»
+								.simple-slider__list
+									span.simple-slider__inner
+										a(href="image/simple-slide-2-big.jpg" class="simple-slider__bg")
+										img(src="image/simple-slide-2.jpg" class="simple-slider__image")
+										span(href="#", class="simple-slider__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider__link js-slider-link-right")
+											i.icon-chevron-right
+										.simple-slider__title Российский национальный приз в области дизайна «Виктория» 2
+								.simple-slider__list
+									span.simple-slider__inner
+										a(href="image/simple-slide-3-big.jpg" class="simple-slider__bg")
+										img(src="image/simple-slide-3.jpg" class="simple-slider__image")
+										span(href="#", class="simple-slider__link js-slider-link-left")
+											i.icon-chevron-left
+										span(href="#", class="simple-slider__link js-slider-link-right")
+											i.icon-chevron-right
+										.simple-slider__title Российский национальный приз в области дизайна «Виктория» 3
+							img.simple-slider__img(src="image/logo_rda.gif")
+
+					section(class="main-feed__info wow fadeIn", data-wow-offset="100" data-wow-delay="0.4s")
+						h1.main-feed__title О компании
+						p.main-feed__text Эдлайн — член Союза дизайнеров России и ведущая компания в сфере дизайна городской среды, праздничного оформления и малых архитектурных форм уже более 20 лет.
+						a(href="#", class="link-article__inner") Подробнее
+							i.icon-angle-right-gray
+
+					section(class="main-feed__author")
+						img(src="image/author.jpg", class="main-feed__author__image wow fadeIn" data-wow-offset="70" data-wow-delay="1.2s")
+						.main-feed__author__content
+							.main-feed__author__title 
+								span(class="wow fadeIn", data-wow-offset="100" data-wow-delay="1.2s") Черняк Мария Александровна
+								span(class="progress wow fadeIn" data-wow-offset="100" data-wow-delay="1.2s")
+							p(class="wow fadeIn" data-wow-offset="50" data-wow-delay="1.2s") Шеф-дизайнер ООО «ЭДЛАЙН»
+							p(class="wow fadeIn" data-wow-offset="50" data-wow-delay="1.2s") Вице-презедент национальной ассоциации Гильдии профессионалов ландшафтной индустрии 2003-2012 гг.
+							p(class="wow fadeIn" data-wow-offset="50" data-wow-delay="1.2s") Вице-президент Союза дизайнеров России
+
+
+				.articlle-vertical
+					div(class="articlle-vertical__title")
+						span(class="wow fadeIn", data-wow-offset="70" data-wow-delay="1.6s") Наш дизайн
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-delay="0.5s" data-wow-duration="2s")
+					.articlle-vertical__items
+						a(href="project.html", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s")
+							span(class="articlle-vertical__image-wrap")
+								img(src="image/1.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Фигуры в центре Москвы к Новому году 2018
+						a(href="project.html", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
+							span.articlle-vertical__image-wrap
+								img(src="image/2.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Правильное название объекта дизайна
+						a(href="project.html", class="articlle-vertical__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.5s")
+							span.articlle-vertical__image-wrap
+								img(src="image/3.jpg", class="articlle-vertical__image")
+							.articlle-vertical__name Правильное название объекта дизайна
+					div.link-article
+						a(href="/design.html", class="link-article__inner wow fadeIn" data-wow-offset="50" data-wow-delay="2.0s") Перейти в раздел
+							i.icon-angle-right-gray
+
+
+				.articlle-realty
+					div(class="articlle-realty__title")
+						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Реализованные проекты
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
+					.articlle-realty__items
+						a(href="project.html", class="articlle-realty__item-big wow fadeIn" data-wow-offset="100" data-wow-delay="0.7s")
+							span.articlle-realty__inner
+								span(class="articlle-realty__image-big-wrap" style="background-image: url(image/6.jpg);")
+								.articlle-realty__name Фонтан на Крымской набережной 
+									br
+									| в парке Музеон
+						.articlle-realty__wrap
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/7.jpg);")
+									.articlle-realty__name Светомузыкальный фонтан в Царицыно
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.2s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/8.jpg);")
+									.articlle-realty__name ММФС «Круг света»
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.4s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/9.jpg);")
+									.articlle-realty__name.articlle-realty__name--small Праздничное оформление города Москвы к Новому Году 2013-2015 г.
+
+					.articlle-realty__items.articlle-realty__items--last
+						.articlle-realty__wrap.articlle-realty__wrap--right
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.6s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/10.jpg);")
+									.articlle-realty__name Цикл фестивалей «Московские сезоны»
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="10" data-wow-delay="1.8s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/11.jpg);")
+									.articlle-realty__name ММФС «Рождественский свет»
+							a(href="project.html", class="articlle-realty__item wow fadeIn" data-wow-offset="0" data-wow-delay="2.0s")
+								span.articlle-realty__inner
+									span(class="articlle-realty__image-wrap" style="background-image: url(image/12.jpg);")
+									.articlle-realty__name.articlle-realty__name--small Светомузыкальный фонтан в ЦПКиО им. М. Горокого
+						a(href="project.html", class="articlle-realty__item-big wow fadeIn" data-wow-offset="10" data-wow-delay="2.2s")
+							span.articlle-realty__inner
+								span(class="articlle-realty__image-big-wrap" style="background-image: url(image/13.jpg);")
+								.articlle-realty__name ММДЦ «Москва-Сити»
+					div.link-article
+						a(href="/design.html", class="link-article__inner wow fadeIn" data-wow-offset="10" data-wow-delay="2.4s") Перейти в раздел
+							i.icon-angle-right-gray
+
+
+				.articlle-anonce
+					div(class="articlle-anonce__title")
+						span(class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.5s") Пресс-центр
+						span(class="progress wow fadeInLeft" data-wow-offset="70" data-wow-duration="2s")
+					.articlle-anonce__items
+						a(href="project.html", class="articlle-anonce__item articlle-anonce__item--video wow fadeIn" data-wow-offset="100" data-wow-delay="1.0s")
+							span.articlle-anonce__image-wrap
+								img(src="image/4.jpg", class="articlle-anonce__image")
+								span.articlle-anonce__play
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 20.06.2018
+								span.articlle-anonce__info Сюжет в программе 
+							.articlle-anonce__name Круг света 2012, ТВЦ
+
+						a(href="project.html", class="articlle-anonce__item wow fadeIn" data-wow-offset="100" data-wow-delay="1.5s")
+							span.articlle-anonce__image-wrap
+								img(src="image/5.jpg", class="articlle-anonce__image")
+							.articlle-anonce__sub-title
+								span.articlle-anonce__date 03.06.2017
+								span.articlle-anonce__info Интервью
+							.articlle-anonce__name Журнал Московские торги 
+					div.link-article
+						a(href="/press-center.html", class="link-article__inner wow fadeIn" data-wow-offset="70" data-wow-delay="1.7s") Перейти в раздел
+							i.icon-angle-right-gray
+							i.icon-angle-right-gray
