@@ -205,6 +205,23 @@ $heightMobile: 320px;
     }
   }
 
+  &__img {
+    width: 107px;
+
+    @include bigger(){
+      width: 30%;
+    }
+
+    @include tablets(){
+      width: 64px;
+    }
+
+    @include phones(){
+      width: 107px;
+    }
+
+  }
+
   &__wrap {
     height: $height;
     overflow: hidden;

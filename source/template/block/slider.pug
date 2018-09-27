@@ -20,7 +20,7 @@ mixin sliderIndex(obj)
 							div
 								.fnc-slide__text.fnc-slides__text= item.textTop
 								.fnc-slide__text.fnc-slides__text= item.textBottom
-							a(href="#", class="fnc-slide__btn fnc-slides__btn") смотреть категорию
+							a(href=`${item.url}`, class="fnc-slide__btn fnc-slides__btn") смотреть категорию
 								i.icon-angle-right-white
 			else
 				.fnc-slide.fnc-slides
@@ -40,7 +40,7 @@ mixin sliderIndex(obj)
 							div
 								.fnc-slide__text.fnc-slides__text= item.textTop
 								.fnc-slide__text.fnc-slides__text= item.textBottom
-							a(href="#", class="fnc-slide__btn fnc-slides__btn") смотреть категорию
+							a(href=`${item.url}`, class="fnc-slide__btn fnc-slides__btn") смотреть категорию
 								i.icon-angle-right-white
 
 		.fnc-nav
