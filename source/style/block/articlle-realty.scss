@@ -217,7 +217,7 @@
     line-height: 1.4;
     font-size: $mainFont;
     overflow: hidden;
-    height: 65px;
+    height: 60p;
     display: -webkit-box;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -228,6 +228,7 @@
 
     @include bigger(){
       font-size: 2vh;
+      height: 68px;
     }
 
     @include big(){

@@ -20,6 +20,10 @@
   transform: translateX(100%);
   display: none;
 
+  @include phones() {
+    display: flex;
+  }
+
   &__item {
     list-style-type: none;
     padding: 0;
@@ -34,8 +38,65 @@
     text-decoration: none;
   }
 
-  @include phones() {
+  &__share {
+    padding-top: 50px;
+    list-style-type: none;
+
+    &__list {
+      position: relative;
+    }
+  }
+
+  &__share-inner {
     display: flex;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    //transform: translateX(25%);
+    background: #fff;
+    min-width: 50px;
+    border-radius: 5px;
+    padding-top: 10px;
+
+    &__list {
+      font-size: 0;
+      margin-right: 7px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+
+      &.YouTube {
+        background-image: url('../image/YouTube.svg');
+        background-size: cover;
+      }
+
+      &.t {
+        background-image: url('../image/t.svg');
+        background-size: cover;
+      }
+
+      &.instagram {
+        background-image: url('../image/instagram.svg');
+        background-size: cover;
+      }
+
+      &.google {
+        background-image: url('../image/google.svg');
+        background-size: cover;
+      }
+
+      &.twitter {
+        background-image: url('../image/twitter.svg');
+        background-size: cover;
+      }
+    }
   }
 
 }

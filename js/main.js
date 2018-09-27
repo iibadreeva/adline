@@ -494,8 +494,9 @@ $('.js-sliders, .js-slider').magnificPopup({
     gallery: {enabled:true}
 });
 
-// $('.simple-slider__inner').magnificPopup({
-//     delegate: 'a',
-//     type: 'image',
-//     gallery: {enabled:true}
-// });
+$('.simple-slider__zoom, .simple-slider__title').click(function () {
+    $('.simple-slider__bg').click();
+});
+$('.js-share').click(function () {
+   $(this).toggleClass('active')
+});

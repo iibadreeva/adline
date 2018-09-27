@@ -1,8 +1,23 @@
-mixin nav(className, items, activeItem)
+mixin nav(className, items, activeItem, type)
 	nav(class=`${className}`)
 		each item, path in items			
 			li(class=(activeItem === item.name) ? `${className}__item active`: `${className}__item`)
 				a(class=`${className}__link`, href=`${item.url}`)= item.title
+
+		if type == 'mobile'
+			ul.topline__share
+				li.topline__share__list Поделиться:
+					ul.topline__share-inner
+						li.topline__share-inner__list
+							a(href="#" class="topline__share-inner__link YouTube")
+						li.topline__share-inner__list
+							a(href="#" class="topline__share-inner__link t")
+						li.topline__share-inner__list
+							a(href="#" class="topline__share-inner__link instagram")
+						li.topline__share-inner__list
+							a(href="#" class="topline__share-inner__link google")
+						li.topline__share-inner__list
+							a(href="#" class="topline__share-inner__link twitter")
 
 
 mixin popup()

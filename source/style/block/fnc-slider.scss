@@ -340,37 +340,37 @@ $heightSliderB: 80vh;
   transform: translate3d(-400px, 0, 0) rotateY(10deg) scale(0.9);
 }
 .example-slider .fnc-slide-1 .fnc-slide__image {
-  background-image: url("../image/assets/1.png");
+  background-image: url("../image/assets/1-big.jpg");
   @include phones(){
     background-image: url("../image/assets/1-mini.jpg");
   }
 }
 .example-slider .fnc-slide-1 .fnc-slide__heading {
-  background-image: url("../image/assets/1-1.png");
+  background-image: url("../image/assets/1-1-big.jpg");
   @include phones(){
     background-image: url("../image/assets/1-1-mini.jpg");
   }
 }
 .example-slider .fnc-slide-2 .fnc-slide__image {
-  background-image: url("../image/assets/2-big.png");
+  background-image: url("../image/assets/2-big.jpg");
   @include phones(){
     background-image: url("../image/assets/2-mini.jpg");
   }
 }
 .example-slider .fnc-slide-2 .fnc-slide__heading {
-  background-image: url("../image/assets/2-2-big.png");
+  background-image: url("../image/assets/2-2-big.jpg");
   @include phones(){
     background-image: url("../image/assets/2-2-mini.jpg");
   }
 }
 .example-slider .fnc-slide-3 .fnc-slide__image {
-  background-image: url("../image/assets/3-big.png");
+  background-image: url("../image/assets/3-big.jpg");
   @include phones(){
     background-image: url("../image/assets/3-mini.jpg");
   }
 }
 .example-slider .fnc-slide-3 .fnc-slide__heading {
-  background-image: url("../image/assets/3-3-big.png");
+  background-image: url("../image/assets/3-3-big.jpg");
   @include phones(){
     background-image: url("../image/assets/3-3-mini.jpg");
   }
