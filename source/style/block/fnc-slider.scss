@@ -70,7 +70,8 @@ $heightSliderB: 80vh;
   }
 
   &__inner {
-    display: none;
+    //display: none;
+    opacity: 0;
     position: relative;
     height: 100%;
   }
@@ -330,8 +331,8 @@ $heightSliderB: 80vh;
   display: block;
 }
 .m--active-slide .fnc-slides__inner {
-  display: block;
-
+  //display: block;
+  opacity: 1;
   //@include phones(){
   //  display: flex;
   //}

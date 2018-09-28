@@ -40,6 +40,11 @@
     &__right {
       order: 3;
       padding-right: 8px;
+      width: 75px;
+
+      @include big(){
+        width: auto;
+      }
 
       @include tablets(){
         padding-right: 5px;
@@ -181,6 +186,10 @@
 
     &__back {
       width: 75px;
+
+      @include big(){
+        width: 16px;
+      }
 
       @include phones(){
         display: none;
